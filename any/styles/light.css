@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url('/fonts/ubuntu.woff2') format('woff2'), url('/fonts/ubuntu.woff') format('woff'), url('/fonts/ubuntu.ttf') format('truetype'), url('/fonts/ubuntu.otf') format('otf'), url('/fonts/ubuntu.eot') format('embedded-opentype'), url('/fonts/ubuntu.svg') format('svg');
+    unicode-range: U+000-5FF;
+}
+
+:root {
+    --font-family: 'ubuntu';
+    --background: #cccccc;
+    --foreground: #000000;
+    --theme: #1a4091;
+    --navbg: #cccccc66;
+    --shadow: #777777;
+}
