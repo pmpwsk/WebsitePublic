@@ -19,7 +19,7 @@
   "related_applications": [
     {
       "platform": "webapp",
-      "url": "/app/notes/manifest.json"
+      "url": "https://beta.uwap.dev/app/notes/manifest.json"
     }
   ],
   "offline_enabled": false,
