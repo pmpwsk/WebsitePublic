@@ -24,12 +24,12 @@
      inkscape:deskcolor="#505050"
      showgrid="false"
      inkscape:zoom="2.0058594"
-     inkscape:cx="256.49854"
-     inkscape:cy="256.24927"
-     inkscape:window-width="2560"
-     inkscape:window-height="1369"
-     inkscape:window-x="1432"
-     inkscape:window-y="518"
+     inkscape:cx="257.49562"
+     inkscape:cy="257.24635"
+     inkscape:window-width="1440"
+     inkscape:window-height="2537"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg5" />
   <defs
@@ -37,10 +37,10 @@
     <filter
        style="color-interpolation-filters:sRGB"
        id="filter3851"
-       x="-0.028311926"
-       y="-0.032185526"
-       width="1.0566239"
-       height="1.0643711">
+       x="-0.050335489"
+       y="-0.061354735"
+       width="1.100671"
+       height="1.1227095">
       <feGaussianBlur
          stdDeviation="0.014623529"
          id="feGaussianBlur3853" />
@@ -63,7 +63,7 @@
        r="224" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:533.333px;font-family:'Courier New';-inkscape-font-specification:'Courier New';fill:#00ff00;fill-opacity:1;stroke:#3f9300;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;filter:url(#filter3851)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:533.333px;font-family:'Courier New';-inkscape-font-specification:'Courier New';fill:#00ff00;fill-opacity:1;stroke:#006900;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;filter:url(#filter3851)"
        x="153.54553"
        y="339.77167"
        id="text530"
@@ -71,6 +71,6 @@
          id="tspan528"
          x="153.54553"
          y="339.77167"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:533.333px;font-family:'Courier New';-inkscape-font-specification:'Courier New';fill:#00ff00;fill-opacity:1;stroke:#3f9300;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill">u</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:533.333px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#00ff00;fill-opacity:1;stroke:#006900;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill">u</tspan></text>
   </g>
 </svg>
