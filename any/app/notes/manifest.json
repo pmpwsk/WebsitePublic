@@ -1,0 +1,16 @@
+{
+  "name": "Notes (uwap.dev)",
+  "short_name": "Notes",
+  "start_url": "/app/notes",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#00ff00",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/no.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}
