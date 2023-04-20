@@ -22,7 +22,6 @@
       "url": "https://beta.uwap.dev/app/notes/manifest.json"
     }
   ],
-  "offline_enabled": false,
   "omnibox": {
     "keyword": "notes"
   },
