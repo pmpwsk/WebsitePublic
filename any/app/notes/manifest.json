@@ -8,8 +8,8 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/icons/no.svg",
-      "type": "image/svg+xml",
+      "src": "/icons/no.ico",
+      "type": "image/x-icon",
       "sizes": "any"
     }
   ]

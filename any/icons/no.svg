@@ -9,6 +9,9 @@
    id="svg5"
    sodipodi:docname="no.svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:export-filename="no.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,8 +27,8 @@
      inkscape:deskcolor="#505050"
      showgrid="false"
      inkscape:zoom="2.0058594"
-     inkscape:cx="256.49854"
-     inkscape:cy="256.24927"
+     inkscape:cx="214.37195"
+     inkscape:cy="256.74781"
      inkscape:window-width="1440"
      inkscape:window-height="2537"
      inkscape:window-x="-8"
@@ -37,10 +40,10 @@
     <filter
        style="color-interpolation-filters:sRGB"
        id="filter3851"
-       x="-0.012799144"
-       y="-0.024119419"
-       width="1.0255983"
-       height="1.0482388">
+       x="-0.025775791"
+       y="-0.0494829"
+       width="1.0515516"
+       height="1.0989658">
       <feGaussianBlur
          stdDeviation="0.014623529"
          id="feGaussianBlur3853" />

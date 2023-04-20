@@ -9,6 +9,9 @@
    id="svg5"
    sodipodi:docname="t.svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:export-filename="t.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,13 +26,13 @@
      inkscape:pagecheckerboard="1"
      inkscape:deskcolor="#505050"
      showgrid="false"
-     inkscape:zoom="2.0058594"
-     inkscape:cx="256.49854"
-     inkscape:cy="256.24927"
-     inkscape:window-width="1440"
-     inkscape:window-height="2537"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:zoom="2"
+     inkscape:cx="196"
+     inkscape:cy="255"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="1432"
+     inkscape:window-y="518"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg5" />
   <defs
@@ -37,10 +40,10 @@
     <filter
        style="color-interpolation-filters:sRGB"
        id="filter3851"
-       x="-0.030880243"
-       y="-0.024052193"
-       width="1.0617605"
-       height="1.0481044">
+       x="-0.054364224"
+       y="-0.045712435"
+       width="1.1087284"
+       height="1.0914249">
       <feGaussianBlur
          stdDeviation="0.014623529"
          id="feGaussianBlur3853" />
@@ -67,7 +70,7 @@
        x="153.54553"
        y="339.77167"
        id="text530"
-       transform="rotate(10,-118.41808,-261.65971)"><tspan
+       transform="rotate(10,-64.112829,-165.99399)"><tspan
          id="tspan528"
          x="153.54553"
          y="339.77167"
