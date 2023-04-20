@@ -8,9 +8,9 @@
   "orientation": "any",
   "icons": [
     {
-      "src": "/icons/no.ico",
-      "type": "image/x-icon",
-      "sizes": "16x16 24x24 32x32 48x48 64x64 72x72 80x80 96x96 128x128 256x256"
+      "src": "/icons/no.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
     }
   ],
   "launch_handler": {
