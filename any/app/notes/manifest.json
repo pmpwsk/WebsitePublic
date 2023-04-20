@@ -2,15 +2,29 @@
   "name": "Notes (uwap.dev)",
   "short_name": "Notes",
   "start_url": "/app/notes",
-  "display": "standalone",
+  "display": "minimal-ui",
   "background_color": "#000000",
   "theme_color": "#202024",
-  "orientation": "portrait-primary",
+  "orientation": "any",
   "icons": [
     {
       "src": "/icons/no.ico",
       "type": "image/x-icon",
-      "sizes": "any"
+      "sizes": "16x16 24x24 32x32 48x48 64x64 72x72 80x80 96x96 128x128 256x256"
     }
-  ]
+  ],
+  "launch_handler": {
+    "client_mode": "navigate-new"
+  },
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "/app/notes/manifest.json"
+    }
+  ],
+  "offline_enabled": false,
+  "omnibox": {
+    "keyword": "notes"
+  },
+  "version": "0.4"
 }
