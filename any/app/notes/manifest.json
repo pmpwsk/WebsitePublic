@@ -5,7 +5,7 @@
   "display": "minimal-ui",
   "background_color": "#000000",
   "theme_color": "#202024",
-  "orientation": "any",
+  "orientation": "portrait-primary",
   "icons": [
     {
       "src": "/icons/no.svg",
@@ -29,7 +29,7 @@
   "related_applications": [
     {
       "platform": "webapp",
-      "url": "https://beta.uwap.dev/app/notes/manifest.json"
+      "url": "/app/notes/manifest.json"
     }
   ],
   "offline_enabled": false,
