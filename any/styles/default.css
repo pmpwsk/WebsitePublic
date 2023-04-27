@@ -78,7 +78,7 @@ div.nav a {
 
 div.nav {
     height: 2.8rem;
-    box-shadow: 0 0 0.25rem 0 var(--theme);;
+    box-shadow: 0 0 0.25rem 0 var(--theme);
     position: fixed;
     overflow: clip;
     background-color: var(--navbg);
@@ -86,6 +86,7 @@ div.nav {
     border-radius: 0.5rem;
     z-index: 1030;
     font-size: 0;
+    line-height: 1.2em;
     margin-top: 0.6rem;
 }
 
@@ -98,6 +99,7 @@ p {
     padding: 0;
     text-indent: -0.6rem;
     font-size: 1.05rem;
+    line-height: 1.2em;
     color: var(--foreground);
     font-family: var(--font-family);
 }
@@ -113,9 +115,11 @@ h1, h2 {
 }
 h1 {
     font-size: 2.1rem;
+    line-height: 1em;
 }
 h2 {
     font-size: 1.4rem;
+    line-height: 1em;
 }
 
 div.buttons a {
@@ -126,6 +130,7 @@ div.buttons a {
     text-decoration: none;
     padding: 0.15rem 0.45rem 0.25rem 0.45rem;
     font-size: 1.05rem;
+    line-height: 1.2em;
 }
 
 div.buttons {
@@ -154,6 +159,7 @@ a.green, div.green, div.buttons a.green {
 
 ul {
     font-size: 1.05rem;
+    line-height: 1.2em;
     color: var(--foreground);
     font-family: var(--font-family);
     margin: 0.15rem 0 0.15rem 0;
@@ -179,6 +185,7 @@ input, input:active, input:focus {
     color: var(--foreground);
     box-sizing: border-box;
     font-size: 1.05rem;
+    line-height: 1.2em;
     resize: none;
     display: block;
     width: 100%;
@@ -190,7 +197,7 @@ input, input:active, input:focus {
 }
 
 textarea.full {
-    height: calc(100vh - 8.05rem);
+    height: calc(100vh - 8.6rem);
 }
 
 img {
@@ -215,6 +222,7 @@ input[type="file"]::file-selector-button {
     text-decoration: none;
     padding: 0.15rem 0.45rem 0.25rem 0.45rem;
     font-size: 1.05rem;
+    line-height: 1.2em;
 }
 
 select, select:active, select:focus {
@@ -226,6 +234,7 @@ select, select:active, select:focus {
     border: none;
     border-radius: 0.3rem;
     font-size: 1.05rem;
+    line-height: 1.2em;
     margin: 0.3rem 0.05rem 0.25rem 0;
     padding: 0.15rem 0.45rem 0.25rem 0.45rem;
     outline: 0;
@@ -236,4 +245,5 @@ option {
     font-family: Arial;
     background: transparent;
     font-size: 1.05rem;
+    line-height: 1.2em;
 }
