@@ -24,6 +24,25 @@
     }
 }
 
+::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--background);
+    border-radius: 0.3rem;
+    box-shadow: inset 0 0 0.2rem 0 var(--theme);
+    
+}
+
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: inset 0 0 0.4rem 0 var(--theme);
+}
+
 html {
     width: 100%;
     height: 100%;
