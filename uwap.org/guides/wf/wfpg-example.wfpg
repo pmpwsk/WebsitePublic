@@ -4,8 +4,16 @@
 #This page uses the "Code" theme regardless of the user's preference, first we'll clear the existing styles
 >> style
 >> style /styles/default-sb.css
+>> style /styles/sidebar-scrolling.css
 >> style /styles/code.css
 #>>script /i/dont/have/any/ideas/for/a/script/here.js
+
+#Navigation button with class "right" to /
+^^ Right button! | right >> /
+
+#Navigation button with text "120px" and class "Image" and not an image, despite having the exact syntax of an image!
+^^ 120px | Image >> /images/chicken-and-cat.jpg
+
 
 Example page
 This is the text below the heading element.
@@ -22,7 +30,10 @@ Alert me! | red >> alert('hey!')
 Text for a button
 Only one line can be the text of a button, so this is a new container!
 
+
 Button without text (opens in a new tab, actually a very nice video!) >> https://youtu.be/CWGOt-Sic2s
+
+
 
 Bullet list:
 - Bullet 1
@@ -30,15 +41,32 @@ Bullet list:
 - Bullet 3
 A stray non-bullet line!
 - Bullet 4 (actually part of a new bullet list)
-- You can have HTML stuff here as well, like <a href="#">to go to the top of the page</a> or <a href="#well-known-image">to the second image</a>.
+- You can have HTML stuff here as well, like <a href="#">to go to the top of the page</a> or <a href="#well-known-image">to the second image</a> or <a href="mailto:flo@uwap.org">to send me an email</a>.
+
+
 
 | >> https://gnu.org
 This is how you'd create a button element with small text.
 
+|
+And here's some small text in a container.
+
+
+
 #Now you could populate the sidebar like this, first I'll clear the old entries:
+
 >> sidebar
+
+<< Green sidebar button | green >> #
+
 >> sidebar populate
 #>>sidebar fill (also works)
+
+<< Last sidebar button >> #
+
+#Picture in the sidebar
+<< 150px | Well-known image >> /images/chicken-and-cat.jpg
+
 
 #This .wfpg file is stored in ../Private/uwap.org/secret.wfpg, so it can't be reached directly
 >> import uwap.org/secret
