@@ -166,7 +166,7 @@ a.sidebar-spacer, div.sidebar-spacer {
     border-radius: 0.5rem;
 }
 
-div.sidebar-items {
+div.sidebar-items, div.content-items {
     margin: 0;
     padding: 0;
 }
