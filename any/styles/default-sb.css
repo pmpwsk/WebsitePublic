@@ -103,7 +103,7 @@ a:hover, textarea:hover, span.textarea:hover, input:hover {
 
 a.elem, div.elem {
     box-sizing: border-box;
-    margin-top: 0.4rem;
+    margin-top: 0.5rem;
     display: block;
     box-shadow: 0 0 0.25rem 0 var(--shadow);
     border-radius: 0.5rem;
@@ -121,8 +121,8 @@ div.footer {
     flex-shrink: 0;
 }
 
-div.content > .elem {
-    scroll-margin-top: 3.8rem;
+div.content div .elem {
+    scroll-margin-top: 3.9rem;
 }
 
 div.nav a {
@@ -153,16 +153,20 @@ div.nav {
 
 div.full {
     display: flex;
+    padding: 3.4rem 0 0.6rem 0;
 }
 
 div.sidebar {
-    padding: 3.4rem 0.6rem 0.6rem 0;
-    overflow-y: clip;
+    margin: 0 0.5rem 0 0;
+}
+
+div.sidebar div .elem {
+    
 }
 
 a.sidebar-spacer, div.sidebar-spacer {
     flex: 1;
-    margin: 0.4rem 0 0 0;
+    margin: 0.5rem 0 0 0;
     box-sizing: border-box;
     display: block;
     box-shadow: 0 0 0.25rem 0 var(--shadow);
@@ -175,7 +179,7 @@ div.sidebar-items, div.content-items {
 }
 
 div.content {
-    padding: 3.4rem 0 0.6rem 0;
+    padding: 0 0 0 0;
     display: flex;
     flex-direction: column;
 }

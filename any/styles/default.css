@@ -68,7 +68,7 @@ a:hover, textarea:hover, span.textarea:hover, input:hover {
 
 a.elem, div.elem {
     box-sizing: border-box;
-    margin-top: 0.4rem;
+    margin-top: 0.5rem;
     display: block;
     box-shadow: 0 0 0.25rem 0 var(--shadow);
     border-radius: 0.5rem;
@@ -81,10 +81,14 @@ a.elem {
 }
 
 div.content > .elem {
-    scroll-margin-top: 3.8rem;
+    scroll-margin-top: 3.9rem;
 }
 div.footer {
     opacity: 60%;
+}
+
+div.full {
+    padding: 3.4rem 0 0.6rem 0;
 }
 
 div.nav a {
@@ -114,11 +118,16 @@ div.nav {
 }
 
 div.content {
-    padding: 3.4rem 0 0.6rem 0;
+    padding: 0 0 0 0;
 }
 
 div.sidebar {
     display: none;
+}
+
+div.content-items {
+    margin: 0;
+    padding: 0;
 }
 
 p {
