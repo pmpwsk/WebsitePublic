@@ -1,5 +1,5 @@
 {
-  "name": "Notes (uwap.dev)",
+  "name": "Notes (uwap.org)",
   "short_name": "Notes",
   "start_url": "/app/notes",
   "display": "minimal-ui",
@@ -36,5 +36,5 @@
   "omnibox": {
     "keyword": "notes"
   },
-  "version": "0.4.1"
+  "version": "0.4.2"
 }

@@ -1,0 +1,37 @@
+>> title Example page
+>> description This is an example page to show people how .wfpg files work.
+
+#This page uses the "Code" theme regardless of the user's preference because it is added after the user's desired theme.
+>> style /styles/code.css
+#>>script /i/dont/have/any/ideas/for/a/script/here.js
+
+Example page
+This is the text below the heading element.
+Hover over the image below to see the tooltip!
+Original guide | green >> /guides/wf/wfpg
+Go home >> /
+250px | Well-known image >> /images/chicken-and-cat.jpg
+
+250px | Well-known image >> /images/chicken-and-cat.jpg
+Here's some more text.
+Alert me! | red >> alert('hey!')
+
+Alert me! | red >> alert('hey!')
+Text for a button
+Only one line can be the text of a button, so this is a new container!
+
+Button without text (opens in a new tab, actually a very nice video!) >> https://youtu.be/CWGOt-Sic2s
+
+Bullet list:
+- Bullet 1
+- Bullet 2, this one is very long to illustrate the way the text wraps around for bullet lists, that's why these are better than just simply adding - in front of a normal text line
+- Bullet 3
+A stray non-bullet line!
+- Bullet 4 (actually part of a new bullet list)
+- You can have HTML stuff here as well, like <a href="#">to go to the top of the page</a> or <a href="#well-known-image">to the second image</a>.
+
+| >> https://gnu.org
+This is how you'd create a button element with small text.
+
+#This .wfpg file is stored in ../Private/uwap.org/secret.wfpg, so it can't be reached directly
+>> import uwap.org/secret
