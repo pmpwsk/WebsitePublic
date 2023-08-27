@@ -157,6 +157,7 @@ div.full {
 
 div.sidebar {
     padding: 3.4rem 0.6rem 0.6rem 0;
+    overflow-y: clip;
 }
 
 a.sidebar-spacer, div.sidebar-spacer {
