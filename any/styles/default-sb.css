@@ -3,6 +3,12 @@
         width: auto;
         margin: 0 0.6rem;
     }
+    div.content {
+        flex: 1;
+    }
+    div.sidebar {
+        display: none;
+    }
     div.nav {
         width: auto;
         margin: 0.6rem 0 0 0;
@@ -11,13 +17,45 @@
     }
 }
 
-@media (min-width: 54.2rem) {
+@media (min-width: 50rem) {
+    div.sidebar {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 14rem;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+}
+
+@media (min-width: 63.8rem) {
+    div.content {
+        flex-basis: 48rem;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+    div.sidebar {
+        flex: 1;
+    }
+}
+
+@media (min-width: 69.8rem) {
+    div.content {
+        flex: 1;
+    }
+    div.sidebar {
+        flex-basis: 20rem;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+}
+
+@media (min-width: 80rem) {
     div.full {
-        width: calc(53rem - (100vw - 100%));
+        width: calc(78.8rem - (100vw - 100%));
         margin: 0 auto;
     }
     div.nav {
-        width: calc(53rem - (100vw - 100%));
+        width: calc(78.8rem - (100vw - 100%));
         margin: 0.6rem auto 0 auto;
         left: 0;
         right: 0;
@@ -27,18 +65,15 @@
 ::-webkit-scrollbar {
     width: 0.6rem;
 }
-
 ::-webkit-scrollbar-track {
     background: var(--background);
 }
-
 ::-webkit-scrollbar-thumb {
     background: var(--background);
     border-radius: 0.3rem;
     box-shadow: inset 0 0 0.2rem 0 var(--theme);
     
 }
-
 ::-webkit-scrollbar-thumb:hover {
     box-shadow: inset 0 0 0.4rem 0 var(--theme);
 }
@@ -75,16 +110,17 @@ a.elem, div.elem {
     padding: 0.7rem 0.8rem 0.75rem 0.8rem;
     font-size: 0;
     overflow: hidden;
+    flex: 0;
 }
 a.elem {
     text-decoration: none;
 }
+div.footer {
+    opacity: 60%;
+}
 
 div.content > .elem {
     scroll-margin-top: 3.8rem;
-}
-div.footer {
-    opacity: 60%;
 }
 
 div.nav a {
@@ -113,12 +149,30 @@ div.nav {
     margin-top: 0.6rem;
 }
 
-div.content {
-    padding: 3.4rem 0 0.6rem 0;
+div.full {
+    display: flex;
 }
 
 div.sidebar {
-    display: none;
+    padding: 3.4rem 0.6rem 0.6rem 0;
+}
+
+a.sidebar-spacer {
+    flex: 1;
+    margin: 0.4rem 0 0 0;
+    box-sizing: border-box;
+    display: block;
+    box-shadow: 0 0 0.25rem 0 var(--shadow);
+    border-radius: 0.5rem;
+}
+
+div.sidebar-items {
+    margin: 0;
+    padding: 0;
+}
+
+div.content {
+    padding: 3.4rem 0 0.6rem 0;
 }
 
 p {

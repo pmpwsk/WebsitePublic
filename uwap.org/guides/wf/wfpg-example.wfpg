@@ -1,7 +1,9 @@
 >> title Example page
 >> description This is an example page to show people how .wfpg files work.
 
-#This page uses the "Code" theme regardless of the user's preference because it is added after the user's desired theme.
+#This page uses the "Code" theme regardless of the user's preference, first we'll clear the existing styles
+>> style
+>> style /styles/default-sb.css
 >> style /styles/code.css
 #>>script /i/dont/have/any/ideas/for/a/script/here.js
 
@@ -32,6 +34,11 @@ A stray non-bullet line!
 
 | >> https://gnu.org
 This is how you'd create a button element with small text.
+
+#Now you could populate the sidebar like this, first I'll clear the old entries:
+>> sidebar
+>> sidebar populate
+#>>sidebar fill (also works)
 
 #This .wfpg file is stored in ../Private/uwap.org/secret.wfpg, so it can't be reached directly
 >> import uwap.org/secret
