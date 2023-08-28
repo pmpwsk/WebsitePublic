@@ -4,7 +4,6 @@
 #This page uses the "Code" theme regardless of the user's preference, first we'll clear the existing styles
 >> style
 >> style /styles/default-sb.css
->> style /styles/sidebar-scrolling.css
 >> style /styles/code.css
 #>>script /i/dont/have/any/ideas/for/a/script/here.js
 
