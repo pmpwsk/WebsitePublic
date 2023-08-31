@@ -109,7 +109,6 @@ a.elem, div.elem {
     border-radius: 0.5rem;
     padding: 0.7rem 0.8rem 0.75rem 0.8rem;
     font-size: 0;
-    overflow: hidden;
     flex: 0;
 }
 a.elem {

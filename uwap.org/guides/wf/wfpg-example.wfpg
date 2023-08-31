@@ -52,20 +52,33 @@ And here's some small text in a container.
 
 
 
+
 #Now you could populate the sidebar like this, first I'll clear the old entries:
 
 >> sidebar
+
+<< Sidebar heading (first element and a container)
 
 << Green sidebar button | green >> #
 
 >> sidebar populate
 #>>sidebar fill (also works)
 
+<< This sidebar button is highlighted red >> /guides/wf/wfpg-example
+
 << Last sidebar button >> #
+
+>> sidebar highlight | red
 
 #Picture in the sidebar
 << 150px | Well-known image >> /images/chicken-and-cat.jpg
 
 
+
 #This .wfpg file is stored in ../Private/uwap.org/secret.wfpg, so it can't be reached directly
 >> import uwap.org/secret
+
+
+
+#I wrote this method in C# and put it in the dictionary of my server
+call SourceLink
