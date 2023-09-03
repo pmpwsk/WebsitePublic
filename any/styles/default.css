@@ -82,6 +82,9 @@ a.elem, div.elem {
     padding: 0.7rem 0.8rem 0.75rem 0.8rem;
     font-size: 0;
 }
+div.elem.overflow {
+    overflow: hidden;
+}
 a.elem {
     text-decoration: none;
 }

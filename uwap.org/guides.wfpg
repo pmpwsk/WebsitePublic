@@ -1,5 +1,8 @@
 >> title Guides
+>> import news
 
 Guides
 
 WebFramework >> /guides/wf
+
+Arch Linux >> /guides/arch

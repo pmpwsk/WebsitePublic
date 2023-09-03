@@ -118,6 +118,9 @@ a.elem, div.elem {
     font-size: 0;
     flex: 0;
 }
+div.sidebar div div.elem, div.elem.overflow {
+    overflow: hidden;
+}
 a.elem {
     text-decoration: none;
 }

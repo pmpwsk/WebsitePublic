@@ -1,9 +1,12 @@
 >> title Useful Web App Project
+>> import news
 
 Hey there! | red
 This project is still in development, so most stuff is missing. Please be patient.
 
 Guides >> /guides
+
+About >> /about
 
 Notes (beta) >> /app/notes
 If you'd like to get access to this app (mostly finished), please contact flo@uwap.org.
