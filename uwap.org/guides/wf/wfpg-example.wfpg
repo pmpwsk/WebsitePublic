@@ -58,6 +58,7 @@ And here's some small text in a container.
 >> sidebar
 
 << Sidebar heading (first element and a container)
+<< Text below the sidebar heading
 
 << Green sidebar button | green >> #
 

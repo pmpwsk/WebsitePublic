@@ -93,6 +93,13 @@ body {
     background: var(--background);
 }
 
+code {
+    padding: 0 0.4rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.15rem 0.2rem -0.1rem var(--shadow);
+    font-family: var(--font-code);
+}
+
 a {
     color: var(--foreground);
     font-family: var(--font-family);

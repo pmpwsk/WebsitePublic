@@ -9,6 +9,7 @@
 
 :root {
     --font-family: 'ubuntu-mono';
+    --font-code: 'ubuntu-mono';
     --background: #000000;
     --foreground: #d0d0d0;
     --theme: #44bb44;
