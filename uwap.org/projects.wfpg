@@ -1,0 +1,9 @@
+>> title Projects
+>> import news
+
+Projects
+There are a ton of projects that will be added to this website, uploaded to GitHub and documented over time. Once there are too many to keep track of, there will be different categories listed here.
+
+WebFramework >> /projects/webframework
+
+TCP library >> /projects/tcp

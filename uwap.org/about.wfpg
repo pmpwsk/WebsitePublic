@@ -1,9 +1,30 @@
->> title About
+﻿>> title About
 >> import news
 
 About
+uwap.org stands for "Useful Web App Project" and that's the goal of this project - to provide useful web apps and tools to make useful web apps yourself. That's not all it's about though, there are many other great <a href="/projects">projects</a> that are not just limited to the web. There is no financial goal behind the project.
+The projects aim to be as stable and simple to use as possible, that takes priority over shiny features and designs.
+
+Contact
+Mail: <a href="/about/flo/mail" target="_blank">flo</a><a href="/about/flo/mail" target="_blank">@</a><a href="/about/flo/mail" target="_blank">uwap.org</a>
+Matrix: <a href="/about/flo/matrix" target="_blank">@mathlete:matrix.org</a>
+For suggestions/problems regarding any code, you can also open an issue on <a href="/github" target="_blank">GitHub</a>.
+
+Privacy policy >> /about/privacy
+uwap.org does not track you. No external content is loaded whatsoever. Read more...
+
+Terms of service >> /about/tos
+uwap.org's free projects come with no warranty or liability. Read more...
 
 Meet the team
 - Flo (<a href="/about/flo">more details</a>)
 Yup, it's just me for now.
 If you'd like to help out, let me know via <a href="/about/flo/mail" target="_blank">email</a> or engage with projects on <a href="/github" target="_blank">GitHub</a>. Thanks!
+
+"Can you code [...] for me?"
+If you'd like me to create a piece of software for you or your company, please contact me (see above).
+I might use the idea to create an open-source project or we can agree on a contract for paid software development.
+
+Donations / finances
+As this is a non-profit project, uwap.org is entirely reliant on donations and smaller contracts. Besides that, it is being funded by <a href="/about/flo">me</a>. You can see uwap.org's finances (expenses and income) on <a href="/about/finances">this page</a>.
+If you'd like to donate (any amount), please contact me and I'll arrange a way to accept your donation.<br/>Thanks in advance! Even if you don't donate, thanks for using my weird little website!

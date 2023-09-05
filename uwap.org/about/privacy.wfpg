@@ -1,0 +1,26 @@
+>> title Privacy policy
+>> import news
+
+Privacy policy
+Privacy matters a lot, so I'm doing my best to preserve yours. I don't care about your data.
+
+Trackers / ads / other 3rd-party stuff
+There are no trackers.
+There is no content from third parties.
+If there will one day be an ad on this website, it will be unobtrusive and will not use any third-party stuff, it'll just be some text and a link.
+
+Cookies
+There are no tracking cookies.
+The only cookie in use is "AuthToken", to remember when you're logged in. Even if you're logged in, uwap.org does not track your activity in any way.
+In the future, there may be a few functional cookies used by web apps on uwap.org - however, those will only be used to generate appropriate pages for you and will not be stored or analyzed in any way.
+
+Scripts
+Scripts on uwap.org are entirely functional and do not analyze your activity or anything like that.
+Disabling the execution of JavaScript code in your browser won't impact your experience of the static part of the website, but anything dynamic (login, web apps) will not work.
+The static part only uses one very simple script to fix an authentication issue with progressive web apps on Firefox mobile. If that bug is ever fixed, the script will be removed.
+
+IP addresses
+Your IP address isn't being stored or analyzed - there's one exception: If you have too many failed login attempts in a given amount of time, your IP address will be stored as a secure hash in the server's memory for the duration of your ban (not saved persistently).
+
+Selling data
+No data about uwap.org has ever been sold and none of it will ever be sold.

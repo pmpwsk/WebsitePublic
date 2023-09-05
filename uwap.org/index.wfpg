@@ -1,12 +1,20 @@
 >> title Useful Web App Project
 >> import news
 
-Hey there! | red
-This project is still in development, so most stuff is missing. Please be patient.
+Useful Web App Project | green
+This website is still in development, so a lot of stuff is missing. Please be patient.
+
+Projects >> /projects
+Check out uwap.org's useful projects here!
 
 Guides >> /guides
+Details on how to use the projects and some third-party software.
 
-About >> /about
+About / Contact >> /about
+Learn more about uwap.org here.
 
 Notes (beta) >> /notes
 If you'd like to get access to this app (mostly finished), please contact me (see "About").
+
+|
+By using uwap.org, you are agreeing to the <a href="/about/tos">terms of service</a>.
