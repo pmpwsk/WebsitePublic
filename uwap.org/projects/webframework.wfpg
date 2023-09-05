@@ -4,7 +4,9 @@
 WebFramework
 This is a .NET library that allows you to create a web server for dynamic and/or static websites and web apps with ease.
 
-Guides for WebFramework | green >> /guides/wf
+Guides for WebFramework | green >> /guides/webframework
+
+Changelog >> /changes/webframework
 
 Main features
 - Events for different types of HTTP requests (app, API, post, upload, download) with objects for easy access to everything you need to handle those requests.

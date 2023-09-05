@@ -1,0 +1,121 @@
+>> title Changelog for WebFramework
+>> import news
+
+Changelog for WebFramework
+
+1.3.0 (2023-09-08)
+- The code is now available on GitHub (that's why most stuff has been documented and stuff was moved to make more sense).
+- Removed the delays to receive mail as they're not actually being used.
+- Added documentation for everything that was left except for pages, elements, styles and scripts.
+- Moved AutoCertificate settings to Server.Config.AutoCertificate.
+- Renamed CacheEntry.AppendTextLines to AppendTextLinesTo.
+- Added method CacheEntry.GetTextLines().
+- The worker will now run when the program starts even if the interval is set to 0. Setting the interval to -1 prevents this.
+- Various optimizations
+- Added various methods to handle .wfpg files.
+- Added various methods to Parsers.
+- Added Image.Title (tooltip).
+- The mail server now also gracefully shuts down when exiting the program using Server.Exit.
+- Added a sidebar to Page and changed the layout a little bit.
+- Added method Page.PopulateSidebar to fill the sidebar with anchor buttons for every element with an ID.
+- Added methods GetFile and GetFileVersion to IPlugin and Plugin.
+- Added parameter string pluginPath to plugin handler methods so they know where they are currently mapped (not static for each plugin because one plugin can be mapped to multiple paths).
+- Plugin requests' relative path will no longer be made "/" if it is "". It will be made "" if the full path (either absolute or after /api or /dl) is "/".
+- Files can now be placed directly into ../Private (as immediate children without a subdirectory, not ../Public), .wfpg files, scripts and styles can be loaded like this for now.
+- Directories and files in ../Public and ../Private (only immediate children - doesn't apply to subdirectories) that start with a dot will no longer be loaded into the cache.
+- The middleware will now check if the mapped plugin (if present) has a file at the requested path before attempting to handle the request as an AppRequest.
+- Added method Parsers.Extension(this string path) to get the file extension of a given path.
+- Styles, scripts and favicons as plugin-served files are now detected.
+- When an AppRequest finishes with an error code and no page has been set, a new one will be created from the preset (CreatePage and Navigation).
+- There is now a page "Redirecting..." that is shown when a redirecting AppRequest results in another app being opened.
+
+1.2.1 (2023-08-10)
+- Added an optional contructor argument for Search to allow for a custom first relevance value and changed the default to 1000.
+- Changed the type of the relevance values and settings in Search to uint.
+- Table names are now being checked for compliance with Tables.KeyChars as well.
+- Added documentation to more properties and methods.
+
+1.2.0 (2023-08-09)
+- Renamed various configuration properties to make more sense.
+- Added documentation to various properties and methods.
+- Added options to set after how long auth tokens expire and get renewed on usage.
+- Changed the type of AccountManager.Settings.FailedAttempts.BanDuration to TimeSpan instead of int for hours.
+- Renamed the password hash "Method" to "Algorithm"
+- Database objects can now be locked multiple times by the same context.
+- Tokens without 2FA or mail verification expire after 10 minutes and don't get renewed until their login process is fully completed. Note that restoring and saving during an inner call applies to changes outside of it as well.
+
+1.1.4 (2023-05-25)
+- Replaced ITableValue<T>.ReportChange() with Lock and UnlockSave/UnlockDiscard.
+- Replaced the locking mechanism for table TableEntry with a custom solution.
+- Added field Server.CurrentHttpContext for the object locking mechanism so no request objects have to be passed around for it.
+
+1.1.3 (2023-05-23)
+- Added methods RedirectToLogin and RedirectToQuery to AppRequest
+- Added lots of methods in the static class Presets
+- Custom presets can now be created and saved for shared use by inheriting PresetsHandler and setting Presets.Handler to that
+
+1.1.2 (2023-05-20)
+- The server domain is now being used in the HELO message when sending mail as well.
+- Scripts and Styles by URL may only have URLs ending with .js or .css now.
+- Changed the "Powered by" text and HTTP server header from uwap.dev/wf to uwap.org/wf.
+
+1.1.1 (2023-05-06)
+- Replaced the password stuff in User with a new class Password2 to increase password security and allow to future security improvements without having to migrate the data, as long as .NET supports the new method for PBKDF2.
+- Added static settings in uwap.WebFramework.Accounts.Password2: DefaultMethod=SHA512, DefaultPassCount=1048576, DefaultSaltLength=16, DefaultHashLength=64. These settings are very secure, but not very fast (for good reason).
+- Note: You shouldn't have to touch those password settings, as the default values will be updated once new algorithms become popular. Accounts will start using the new settings when a new password is set for them.
+- Another note: If logins are too slow for your taste after this update, consider decreasing the DefaultPassCount setting to 1048576 or even lower (remember to set a new password to apply it to your account). This reduces security a bit.
+- Added method Password2.WasteTime(string password) to spend about the same amount of time as Check(string password) would take. This is useful if the username wasn't found and that fact should be a secret (already used by UserTable.Login).
+
+1.1.0 (2023-05-02)
+- Added the option to map plugins to a domain-path-combination with fallbacks, also considering the domain set as the canonical origin. Plugins can be created inheriting interface uwap.WebFramework.IPlugin or class Plugin.
+- Added methods for handling app/api/download/upload/post requests to plugins.
+- Added a method to be called by the worker to plugins.
+- The origin domains of the requested domain will also be considered for Page stuff now. (title, canonical link, favicon, copyright name)
+- The origin domains of the requested domain will also be considered for file serving now.
+- Added Dictionary<string> Server.Config.Domains.Redirect to automatically redirect from the key domain to the value domain, like from www.uwap.dev to uwap.dev or the other way around.
+- Added classes to send a receive mail. Refer to the manual for details.
+- AutoCertificate now requests a certificate for MailManager.ServerDomain as well, if present.
+- AutoCertificate no longer attempts to get certificates for ../Public folders without dots or with just one dot at the start.
+
+1.0.6 (2023-04-28)
+- Replaced RawHtmlElement with CustomElement, this supports multiple lines as a List<string> as well now.
+- Added CustomStyle, similar to CustomScript
+- Added {501,"Created."} to the default status messages
+
+1.0.5 (2023-04-20)
+- Added string? Page.Favicon to set the path for favicons. The default value is "/favicon.ico", null disables it.
+- Added List<string> Page.Head to allow for adding custom elements to <head>.
+- Added JSON and SVG to the default MIME types and cache types.
+
+1.0.4 (2023-04-16)
+- Made Table<T> enumerable with KeyValuePair<string,T> so foreach and other stuff can be used.
+- Added List<string> AutoCertificate.Domains in addition to the Public folder. This is meant for domains that don't have any public files beyond 'any'.
+- Added string? OnInput to TextBox, TextArea and FlexibleTextArea to do something in JS whenever the value changes.
+
+1.0.3 (2023-04-15)
+- Added a canonical property to Page (generated on export), use the dictionary (see below) to control this behavior. Set the value for key="any" to null to disable this entirely. This is mainly for SEO purposes.
+- Moved setting Server.Config.AutoCertificateEmail to AutoCertificate.Email (AutoCertificate is now its own class).
+- Changed the content type for ACME challenge responses (used for automatic certificates) to text/plain;charset=utf-8 instead of text/plain, just in case they ever want special characters and don't default to UTF-8.
+- The server now checks if it is reachable over a domain before even trying to request a certificate for it and throws an exception if it is unreachable. To disable these errors, set the new bool AutoCertificate.MuteUnreachableErrors to true.
+- Added Server.Config.Domains with three Dictionary<string,string?> (details below). Set key "any" as a fallback in case a domain can't be found.
+- Added dictionary TitleExtensions to assign an extension to the title like "Title | Extension" to a domain (null means no extension, missing means domain as extension).
+- Added dictionary CopyrightNames to assign a name for the copyright part in the footer for a domain (null means no copyright in the footer, missing means domain as copyright name).
+- Added dictionary CanonicalDomains to set an origin domain for a domain (null means domain as canonical domain, missing without "any" means no canonical property).
+- Added string? Page.Description for SEO and website previews.
+- Added bool TryGetValueAny(this Dictionary<TKey,TValue> dictionary, out TValue result, params TKey[] keys) extension method to Parsers. This will use the first found key's value as the result or return false if none were found.
+
+1.0.2 (2023-04-09)
+- Added CustomScript to provide the code for scripts dynamically, mainly for short scripts that don't need a new file.
+- Added a constructor for HeadingElement that only takes one string as its parameter to allow for simple headings without giving an empty string.
+- Added methods CallApi() or CallDownload() to AppRequest to change the request to an API or download request, this locks the present AppRequest and calls the corresponding event with a new request object.
+- ContentType is now being set to text/plain when writing a status message, this fixes the displaying of status messages in Firefox.
+
+1.0.1 (2023-03-24)
+- Added calming messages after fixing UserTable accelerators so admins know the issue has automatically been fixed.
+- Broken Table entries will now be automatically fixed if possible (the before mentioned calming messages have been added here too).
+- Table.Delete(string) and User.Settings.Delete(string) will now return true if successful and false if the key wasn't found instead of throwing an exception.
+
+1.0.0 (2023-03-22)
+- First stable and official build for this complete reimagination + rewrite of the web framework! :)
+- Added 'any' as a domain wildcard for the user table selector.
+- Added method 'bool TryGetValue(string, out T)' to Table and User.Settings.
