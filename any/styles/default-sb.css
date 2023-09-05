@@ -190,6 +190,7 @@ div.nav {
 div.full {
     display: flex;
     padding: 3.4rem 0 0.6rem 0;
+    overflow-wrap: anywhere;
 }
 
 div.sidebar {
