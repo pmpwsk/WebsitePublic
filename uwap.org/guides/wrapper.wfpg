@@ -1,0 +1,41 @@
+>> title Wrapper Guide
+
+Wrapper Guide
+
+Installation
+- Download a binary for your system from the releases on GitHub (SC means self-contained, FD means framework-dependent so it needs dotnet installed) or build the code yourself
+- Create a folder for the entire application and enter it
+- Create a subfolder Live/ and place the program to be watched in there (this is where the current version is always kept)
+- Create a subfolder Wrapper/ and place the Wrapper binary in there
+- Create a file Wrapper.config according to the guide (see above, at least TargetFile must be set)
+- Execute the Wrapper binary in Wrapper/ (maybe create a service for it)
+
+Configuration
+This is done in Wrapper.config, each possible line consists of a key and a value like <code>key=value</code>.
+<code>TargetFile=MyProgram</code> sets the path of the target program relative to Live/ (required!).
+<code>Arguments=arg1 arg2</code> sets the launch arguments for the target program (default: none).
+<code>AutoRestart=true</code> automatically restarts the target when it exits (default: false). To temporary prevent this, you can use the command <code>wrapper set AutoRestart=false</code>.
+<code>LogFile=Wrapper.log</code> sets the location of the log file to write to (default: no log file).
+<code>LogLimit=50000</code> limits the log file to 50000 characters (that's the default).
+<code>Timestamps=true</code> prepends UTC timestamps to each line of the log (default: false).
+<code>DisableCommands=true</code> disables wrapper commands called from the target (default: false).
+<code>CreateBackup=true</code> backs up the current version of the target to Backup/ each time it is updated (allows rollbacks).
+
+Updating the target
+Create a subfolder Update/ and place the new binary in there. Next time the watched program starts, the new version will be applied. A backup of the last version might be created if configured.
+
+Reverting to the previous version
+Note that this is only possible if <code>CreateBackup=true</code> is configured.
+If that's the case, just have the target output <code>wrapper rollback</code> (command) in the console. Next time it starts, the previous version will be loaded.
+
+Commands
+These can be executed by the target program by outputting <code>wrapper some-awesome-command</code> to the console.
+<code>wrapper set key=value</code> temporarily overrides the wrapper's configuration with the provided key and value until the wrapper exits or <code>wrapper reload-config</code> is called.
+<code>wrapper reload-config</code> reloads the configuration from Wrapper.config.
+<code>wrapper log-clear</code> clears the log file.
+<code>wrapper log-backup</code> backs up the log file to [log file path].backup for safe viewing.
+<code>wrapper rollback</code> requests the wrapper to revert the target to its previous version when it is started again.
+
+>> import guide-end
+
+>> sidebar populate

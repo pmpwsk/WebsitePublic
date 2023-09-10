@@ -3,6 +3,9 @@
 
 Changelog for WebFramework
 
+UPCOMING:
+- ScriptOrStyle now also works as intended if the URL contains a query string.
+
 1.3.1 (2023-09-09)
 - Replaced all of the generated code parts for all pages, elements, scripts and styles with enumerators so page generation is now way more efficient and has greatly improved runtime characteristics in general.
 - CustomPage: Removed automatic favicon adding, renamed Head and Body to HeadLines and BodyLines, added title extension appending like in Page, added a title parameter to the constructor.
