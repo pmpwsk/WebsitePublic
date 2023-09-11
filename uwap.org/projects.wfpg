@@ -9,4 +9,8 @@ WebFramework >> /projects/webframework
 
 Wrapper >> /projects/wrapper
 
+ServerPlugin >> /projects/server-plugin
+
+NotesPlugin >> /projects/notes-plugin
+
 TCP library >> /projects/tcp

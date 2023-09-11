@@ -1,0 +1,9 @@
+>> title Changelog for NotesPlugin
+>> import news
+
+Changelog for NotesPlugin
+
+1.2.2 (2023-09-12)
+- First release :)
+- Removed the check for AccessLevel<2 as it is no longer restricted to the beta group.
+- Removed uwap.org-specific things and packed scripts, icons and the manifest into the code.

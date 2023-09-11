@@ -1,0 +1,9 @@
+>> title Changelog for ServerPlugin
+>> import news
+
+Changelog for ServerPlugin
+
+1.4.1 (2023-09-11)
+- First release :)
+- Removed uwap.org-specific things and packed scripts into the code.
+- If an SSH user's key file is requested to be enabled but it never existed in the first place, a new empty file is generated.
