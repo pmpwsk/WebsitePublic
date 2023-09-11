@@ -16,7 +16,7 @@ Main features
 
 Installation
 You can install this library to your WF project by downloading a .dll file or the source code and referencing it in your project file. In the future, there will be a NuGet package.
-If you're using the source code, you will need to update the project reference to WebFramework according to where you have it.
+If you're using the source code, you will need to update the project reference to WebFramework according to where you have it. The reference will soon be replaced with a NuGet dependency so the library becomes smaller and you don't need to reference WF manually.
 Once installed, add the following things to your program start code:
 - Add <code>using uwap.WebFramework.Plugins;</code> to the top, otherwise you have to prepend it to <code>NotesPlugin</code>
 - Create a new object of the plugin: <code>NotesPlugin notesPlugin = new();</code>
