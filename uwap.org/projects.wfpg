@@ -13,4 +13,6 @@ ServerPlugin >> /projects/server-plugin
 
 NotesPlugin >> /projects/notes-plugin
 
+RedirectPlugin >> /projects/redirect-plugin
+
 TCP library >> /projects/tcp
