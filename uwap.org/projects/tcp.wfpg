@@ -2,5 +2,25 @@
 >> import other-projects
 
 TCP library
+Cross-platform .NET library written in C# that allows you to easily create server-client communication using TCP messages.
+The messages consist of text only (encoded in UTF-8) and end with a line break, so if you want to send bytes or a message with line breaks, you'll have to implement escape characters or something like base64 encoding on both ends.
 
-Nothing to see here yet! | red
+Guide for the TCP library | green >> /guides/tcp
+
+Repository on GitHub >> https://github.com/pmpwsk/TCP
+
+Main features
+- Server listening for clients
+- Clients connecting to a server
+- Events: ConnectionReceived, ConnectionLost, MessageReceived
+- Using the .NET thread pool
+- Server dual-mode (listening on IPv4 and IPv6 at once without 
+- Same connection class for server and clientstwo listener threads)
+- Locks so threads don't write to a connection at the same time
+- Automatic splitting of traffic into individual messages encoded in UTF-8 (no line breaks, see above!)
+- Extracting the IP address and port of the machine on the other end of connections
+
+Installation
+For now, there is no binary you can just install on your server, however, that's in the works.
+You can download the source code from <a href="https://github.com/pmpwsk/TCP" target="_blank">GitHub</a> and add a reference to it from your project.
+Soon, there will also be a NuGet package so you can simply install and update that.

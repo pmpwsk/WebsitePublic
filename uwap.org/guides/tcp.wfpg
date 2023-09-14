@@ -1,0 +1,32 @@
+>> title TCP Guide
+
+TCP Guide
+The messages consist of text only (encoded in UTF-8) and end with a line break, so if you want to send bytes or a message with line breaks, you'll have to implement escape characters or something like base64 encoding on both ends.
+Once connected, serverside and clientside connections work exactly the same, so everything regarding <code>TcpConnection</code> applies to both. Servers use <code>TcpServer</code> to listen for clients.
+The necessary classes are contained in the namespace <code>uwap.TCP</code>, so you should probably add <code>using uwap.TCP;</code> to the top of your code.
+In the following examples, port 12345 will be used. Keep in mind that usage of ports 1-1024 will require elevated rights on most systems.
+
+Installation
+For now, there is no binary you can just install on your server, however, that's in the works.
+You can download the source code from <a href="https://github.com/pmpwsk/TCP" target="_blank">GitHub</a> and add a reference to it from your project.
+Soon, there will also be a NuGet package so you can simply install and update that.
+
+Creating a server
+To create a new server object:<br/><code>TcpServer server = new(12345);</code><br/>You can use <code>new(12345, false)</code> if you can't support IPv4.
+Assigning a method (below) to the ConnectionReceived event:<br/><code>server.ConnectionReceived += Server_ConnectionReceived;</code>
+Starting the server:<br/><code>server.Start();</code>
+Method for ConnectionReceived:<br/><code>void Server_ConnectionReceived(TcpConnection connection) { ... }</code><br/>In this method, you'll get TcpConnection objects to save and work with.
+
+Connecting a client to a server
+Connect to a server (uwap.org:12345 here) and get the connection object from it:<br/><code>TcpConnection connection = TcpConnection.Connect("uwap.org", 12345);</code><br/>If you are going to have a lot of connections to servers, you should use the .NET thread pool like this:<code>TcpConnection.Connect("uwap.org", 12345, true)</code>
+That's it, now you have a TcpConnection object to work with.
+
+Using a TcpConnection
+First, you'll want to assign the two events (methods below):<br/><code>connection.MessageReceived += Connection_MessageReceived;</code><br/><code>connection.ConnectionLost += Connection_ConnectionLost;</code>
+Methods to handle the events:<br/><code>void Connection_MessageReceived(TcpConnection connection, string message) { ... }</code><br/><code>void Connection_ConnectionLost(TcpConnection connection) { ... }</code>
+Sending a message:<br/><code>connection.Send("Awesome message");</code>
+Disconnecting and disposing the connection:<br/><code>connection.Disconnect();</code><br/>If the connection has been lost, the connection object will be disposed automatically.
+
+>> import guide-end
+
+>> sidebar populate
