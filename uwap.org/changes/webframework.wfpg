@@ -3,6 +3,9 @@
 
 Changelog for WebFramework
 
+1.3.3.2 (2023-09-15)
+- Plugin files can now be accessed even if mail verification or 2FA confirmation are currently required.
+
 1.3.3.1 (2023-09-15)
 - The constructor of User will no longer attempt to lock the table entry for it that doesn't exist yet.
 
