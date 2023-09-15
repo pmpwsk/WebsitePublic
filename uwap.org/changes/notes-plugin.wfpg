@@ -3,6 +3,10 @@
 
 Changelog for NotesPlugin
 
+1.2.3 (2023-09-15)
+- Switched to the NuGet package of WebFramework.
+- NuGet package published :)
+
 1.2.2 (2023-09-12)
 - First release :)
 - Removed the check for AccessLevel<2 as it is no longer restricted to the beta group.

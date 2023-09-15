@@ -3,6 +3,10 @@
 
 Changelog for ServerPlugin
 
+1.4.2 (2023-09-15)
+- Switched to the NuGet package of WebFramework.
+- NuGet package published :)
+
 1.4.1 (2023-09-11)
 - First release :)
 - Removed uwap.org-specific things and packed scripts into the code.

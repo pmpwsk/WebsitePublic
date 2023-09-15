@@ -1,0 +1,11 @@
+>> title Changelog for RedirectPlugin
+>> import news
+
+Changelog for RedirectPlugin
+
+1.0.1 (2023-09-15)
+- Switched to the NuGet package of WebFramework.
+- NuGet package published :)
+
+1.0.0 (2023-09-11)
+- First release :)
