@@ -24,7 +24,7 @@ Main features
 - Showing that the system needs to be rebooted after a system upgrade (requires Linux)
 
 Installation
-You can add this plugin to your WF project by installing the NuGet package: <a href="https://www.nuget.org/packages/uwap.RedirectPlugin/" target="_blank">uwap.RedirectPlugin</a><br/>You can also download the source code and reference it in your project file.
+You can add this plugin to your WF project by installing the NuGet package: <a href="https://www.nuget.org/packages/uwap.ServerPlugin/" target="_blank">uwap.ServerPlugin</a><br/>You can also download the source code and reference it in your project file.
 Once installed, add the following things to your program start code:
 - Add <code>using uwap.WebFramework.Plugins;</code> to the top, otherwise you have to prepend it to <code>ServerPlugin</code>
 - Create a new object of the plugin: <code>ServerPlugin serverPlugin = new();</code>

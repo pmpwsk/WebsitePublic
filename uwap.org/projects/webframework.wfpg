@@ -28,7 +28,6 @@ Most features have plugins as interfaces.
 Installation
 You can get the NuGet package here: <a href="https://www.nuget.org/packages/uwap.WebFramework/" target="_blank">uwap.WebFramework</a>
 You can also download the source code from <a href="https://github.com/pmpwsk/WebFramework" target="_blank">GitHub</a> and add a reference to it from your project.
-Soon, there will also be a NuGet package so you can simply install and update that.
 This library is based on ASP.NET, so it's best to create an empty ASP.NET project rather than a console app (those will terminate unless paused otherwise).
 
 Official plugins

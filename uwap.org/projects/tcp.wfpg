@@ -23,4 +23,3 @@ Main features
 Installation
 You can get the NuGet package here: <a href="https://www.nuget.org/packages/uwap.TCP/" target="_blank">uwap.TCP</a>
 You can also download the source code from <a href="https://github.com/pmpwsk/TCP" target="_blank">GitHub</a> and add a reference to it from your project.
-Soon, there will also be a NuGet package so you can simply install and update that.
