@@ -1,0 +1,24 @@
+>> title ReleaseCollector
+>> import other-projects
+
+ReleaseCollector
+Visual Studio extension (VSIX) that publishes your .NET projects for various systems and collects the files in one folder (bin/v... with the highest version number or bin/latest if no version folder was found).
+
+Repository on GitHub >> https://github.com/pmpwsk/ReleaseCollector
+
+Main features
+- Publishing projects for multiple systems at once without creating any publish profiles
+- Combining releases that use multiple files (like .dll files) into ZIP files (only the case with self-contained builds for Windows using libraries, the rest usually only need a single file)
+- Collecting the releases (either single-file executables or ZIP files) in a single folder, named after the version (if present) and system (example: <a href="https://github.com/pmpwsk/Wrapper/releases" target="_blank">Wrapper releases on GitHub</a>)
+
+Installation
+You can download the .vsix file from the <a href="https://github.com/pmpwsk/ReleaseCollector/releases" target="_blank">releases on GitHub</a> and open it to install the extension.
+
+Usage
+To execute the command, go to: <code>Tools > Publish and collect</code>
+There are some settings under <code>Tools > Options > ReleaseCollector</code>, those are documented in their description.
+
+Plans for the future
+- Support for libraries (as NuGet packages)
+- Support for MAUI projects
+- Support for Visual Studio extensions

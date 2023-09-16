@@ -1,0 +1,9 @@
+>> title Changelog for UsersPlugin
+>> import news
+
+Changelog for UsersPlugin
+
+1.2.2 (2023-09-19)
+- First release :)
+- Removed uwap.org-specific things and packed scripts into the code.
+- NuGet package published :)
