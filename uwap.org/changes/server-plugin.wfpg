@@ -3,6 +3,9 @@
 
 Changelog for ServerPlugin
 
+1.4.2.1 (2023-09-17)
+- Updated to the latest version of WebFramework and regenerated FileHandler.cs accordingly.
+
 1.4.2 (2023-09-15)
 - Switched to the NuGet package of WebFramework.
 - NuGet package published :)

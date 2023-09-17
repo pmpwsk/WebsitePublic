@@ -3,7 +3,10 @@
 
 Changelog for UsersPlugin
 
-1.2.2 (2023-09-19)
+1.2.2.1 (2023-09-17)
+- Updated to the latest version of WebFramework and regenerated FileHandler.cs accordingly.
+
+1.2.2 (2023-09-17)
 - First release :)
 - Removed uwap.org-specific things and packed scripts into the code.
 - NuGet package published :)

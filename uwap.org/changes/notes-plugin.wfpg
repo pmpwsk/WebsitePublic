@@ -3,6 +3,11 @@
 
 Changelog for NotesPlugin
 
+1.2.3.1 (2023-09-17)
+- Changed the icon to remove one size for standardization across plugins.
+- Changed the package icon to no-128.png instead of u-128.png.
+- Updated to the latest version of WebFramework and regenerated FileHandler.cs accordingly.
+
 1.2.3 (2023-09-15)
 - Switched to the NuGet package of WebFramework.
 - NuGet package published :)
