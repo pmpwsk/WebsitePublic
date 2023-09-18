@@ -15,7 +15,7 @@ Installation
 You can download the .vsix file from the <a href="https://github.com/pmpwsk/ReleaseCollector/releases" target="_blank">releases on GitHub</a> and open it to install the extension.
 
 Usage
-To execute the command, go to: <code>Tools > Publish and collect</code>
+To execute the command, go to: <code>Tools > Publish and collect</code> (if there are multiple projects in your solution, you might need to click on the desired project to select it!)
 There are some settings under <code>Tools > Options > ReleaseCollector</code>, those are documented in their description.
 
 Plans for the future
