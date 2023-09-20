@@ -3,6 +3,9 @@
 
 Changelog for WebFramework
 
+UPCOMING
+- Added class Password3 with PBKDF2 to replace Password2.
+
 1.3.4.1 (2023-09-18)
 - Added a HEAD request handler that simply returns code 200 for path / and 404 otherwise. This allows the server to be seen in server discovery using HEAD requests.
 
