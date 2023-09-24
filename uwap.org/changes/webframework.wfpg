@@ -3,8 +3,24 @@
 
 Changelog for WebFramework
 
-UPCOMING
-- Added class Password3 with PBKDF2 to replace Password2.
+1.4 (2023-09-24)
+- Added class Password3 with PBKDF2 to replace Password2 in User.
+- Added new classes for 2FA to allow for multiple types of 2FA (and at the same time) in the future and replaced the 2FA stuff in User with it.
+- Used TOTP (2FA) time steps are now persistent.
+- Added Argon2 password hashing to Password3.
+- Created class User_Old2 with all properties of User except Password2 instead of Password3, TwoFactor instead of TwoFactorData and no methods, and added constructor User(User_Old2 old). This was done so old User objects can still be deserialized and upgraded.
+- Replaced User._Username with Username, removing the field that wrapped around _Username before.
+- Added method Serialization.DeserializeUser to specifically deserialize User objects and upgrade them if necessary. Deserialize(...) should no longer be used for User objects and a type check has been implemented for it.
+- Updated UserTable.Reload to be more specific for users, to allow object upgrading.
+- Added bool AccountManager.Settings.AutoUpgradePasswordHashes to set whether to automatically upgrade password hashes to the set default hash settings when users log in and their hash settings doesn't match the default settings.
+- Server.CurrentHttpContext will now return null instead of throwing an exception if no context was found.
+- Added the canonical origin of "any" to the Parsers.Domains result.
+- Database table entries will now be locked before trying to check and fix them, there is an option to avoid this.
+- Removed 'Response' from MailSendResult.Attempt as that should be written to the log instead (there can be multiple responses, after all).
+- Replaced MailSendResult.Attempt.Success (bool) with ResultType (Success, Mixed, Fail).
+- Added string Parsers.EnumerationText(this IEnumerable<string> values) to return something like this: "[0], [1], [2] and [3]".
+- Added method MailManager.Out.Send that optionally accepts IEnumerable<MailboxAddress> as TO (to allow for multiple recipients) and generates, signs and sends the mail in one step.
+- Created a class MailGen that contains all of the information needed to generate a mail message. This can be used to send messages instead of passing all of the parts as individual parameters.
 
 1.3.4.1 (2023-09-18)
 - Added a HEAD request handler that simply returns code 200 for path / and 404 otherwise. This allows the server to be seen in server discovery using HEAD requests.
