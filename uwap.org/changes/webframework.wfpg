@@ -15,7 +15,7 @@ Changelog for WebFramework
 - Added class Password3 with PBKDF2 to replace Password2 in User.
 - Added new classes for 2FA to allow for multiple types of 2FA (and at the same time) in the future and replaced the 2FA stuff in User with it.
 - Used TOTP (2FA) time steps are now persistent.
-- Added Argon2 password hashing to Password3.
+- Added Argon2 password hashing to Password3 (new default).
 - Created class User_Old2 with all properties of User except Password2 instead of Password3, TwoFactor instead of TwoFactorData and no methods, and added constructor User(User_Old2 old). This was done so old User objects can still be deserialized and upgraded.
 - Replaced User._Username with Username, removing the field that wrapped around _Username before.
 - Added method Serialization.DeserializeUser to specifically deserialize User objects and upgrade them if necessary. Deserialize(...) should no longer be used for User objects and a type check has been implemented for it.
