@@ -3,6 +3,13 @@
 
 Changelog for ServerPlugin
 
+1.4.3 (2023-09-25)
+- Updated to the latest version of WebFramework and changed the mail stuff accordingly.
+- "Send an email" now supports multiple recipients (separated by space, comma or semicolon).
+- Enabling/disabling key files and adding/removing keys for system users will now cause a log entry.
+- SSH log entries now contain the username and ID of the user that requested it.
+- Added an option to disable log clearing from the interface (bool allowLogClearing in the constructor).
+
 1.4.2.1 (2023-09-17)
 - Updated to the latest version of WebFramework and regenerated FileHandler.cs accordingly.
 

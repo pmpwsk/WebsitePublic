@@ -3,6 +3,10 @@
 
 Changelog for UsersPlugin
 
+1.2.2.2 (2023-09-25)
+- Updated to the latest version of WebFramework and replaced 2FA stuff accordingly.
+- Fixed wrong script links for recovery.
+
 1.2.2.1 (2023-09-17)
 - Updated to the latest version of WebFramework and regenerated FileHandler.cs accordingly.
 

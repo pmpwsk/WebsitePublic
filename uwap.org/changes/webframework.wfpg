@@ -3,6 +3,14 @@
 
 Changelog for WebFramework
 
+1.4.1 (2023-09-26)
+- Fixed that POST requests without forms cause an internal error that isn't being handled.
+- Changed the default email size limit to 64MB (instead of 16MB).
+- Moved text/byte/file writing and finish of ApiRequest and CorsDomain to a new abstract class SimpleResponseRequest.
+- Changed ApiRequest, PostRequest and UploadRequest to inherit SimpleResponseRequest. This way, POST and upload requests can now respond.
+- Added PostRequest.HasForm.
+- Added PostRequest.GetBodyText().
+
 1.4 (2023-09-24)
 - Added class Password3 with PBKDF2 to replace Password2 in User.
 - Added new classes for 2FA to allow for multiple types of 2FA (and at the same time) in the future and replaced the 2FA stuff in User with it.
