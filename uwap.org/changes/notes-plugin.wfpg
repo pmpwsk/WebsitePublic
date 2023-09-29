@@ -4,8 +4,10 @@
 Changelog for NotesPlugin
 
 1.2.4 (2023-09-29)
+- Changed the icon's SVG to be more reliable across platforms.
 - Changed the database table and notes storage to allow for different users with the same ID in different tables.
 - When editing a note, pressing Ctrl+S will now save it.
+- Added button "Notes" to the navigation bar that goes to the root folder.
 
 1.2.3.2 (2023-09-27)
 - Changed note saving to use POST requests in order to avoid query length limits.
