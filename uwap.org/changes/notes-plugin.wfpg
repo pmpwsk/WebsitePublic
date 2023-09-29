@@ -3,7 +3,7 @@
 
 Changelog for NotesPlugin
 
-1.2.4 (2023-09-28)
+1.2.4 (2023-09-29)
 - Changed the database table and notes storage to allow for different users with the same ID in different tables.
 - When editing a note, pressing Ctrl+S will now save it.
 
