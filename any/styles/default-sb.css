@@ -365,3 +365,8 @@ option {
     font-size: 1.05rem;
     line-height: 1.2em;
 }
+
+div.clear {
+    clear: right;
+    margin: 0 0 -0.1rem 0;
+}
