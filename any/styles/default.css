@@ -292,5 +292,10 @@ option {
 
 div.clear {
     clear: right;
+    margin: 0;
+}
+
+div.clear-o {
+    clear: right;
     margin: 0 0 -0.1rem 0;
 }
