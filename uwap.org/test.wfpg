@@ -1,0 +1,26 @@
+>> title .wpfg test page
+
+Large
+Button >> #
+
+Medium
+Button >> #
+
+Medium
+
+|
+Small
+Button >> #
+
+|
+Small
+
+|
+Button >> #
+
+Mixed
+Here's some text, it might be a little long but that's totally intentional, I promise. I want to see how wrapping text affects the clear div.
+Button >> #
+
+Mixed
+Here's some text, it might be a little long but that's totally intentional, I promise. I want to see how wrapping text affects the clear div.
