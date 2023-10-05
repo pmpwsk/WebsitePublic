@@ -3,6 +3,15 @@
 
 Changelog for WebFramework
 
+1.4.2 (2023-10-06)
+- Added clear divs to elements with buttons so they no longer overflow if overflow is not set to hidden.
+- Added List<string> AccountManager.Settings.WildcardDomains to allow for auth cookies to be shared across a domain and its subdomains.
+- Added string Domain(this HttpContext c) to get the host without the port and replaced Host(c) with it in some places.
+- Added TryGet and TryGetValue to CookieManager.
+- Added class AttachmentGen for MailGen so attachments can be sent along with emails.
+- Added method User.Auth.Renew(...) to replace a given auth token with a new one.
+- Changed UserTable.Authenticate to renew auth tokens instead of extending their validity.
+
 1.4.1 (2023-09-26)
 - Fixed that POST requests without forms cause an internal error that isn't being handled.
 - Changed the default email size limit to 64MB (instead of 16MB).
