@@ -17,6 +17,8 @@ Changelog for WebFramework
 - Added PluginManager.GetDomains().
 - Added plugin domains to the domains for AutoCertificate.
 - Added an option to pre-select an item in Selector.
+- Changed MailManager.DnsLookup to have a public getter.
+- Renamed MailAuthResult to MailConnectionData.
 
 1.4.1 (2023-09-26)
 - Fixed that POST requests without forms cause an internal error that isn't being handled.
