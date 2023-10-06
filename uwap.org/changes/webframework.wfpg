@@ -8,9 +8,15 @@ Changelog for WebFramework
 - Added List<string> AccountManager.Settings.WildcardDomains to allow for auth cookies to be shared across a domain and its subdomains.
 - Added string Domain(this HttpContext c) to get the host without the port and replaced Host(c) with it in some places.
 - Added TryGet and TryGetValue to CookieManager.
-- Added class AttachmentGen for MailGen so attachments can be sent along with emails.
+- Added class MailGenAttachment for MailGen so attachments can be sent along with emails.
+- Replaced MailGen.Text and IsHtml with TextBody and HtmlBody and added a list of attachments to MailGen.
 - Added method User.Auth.Renew(...) to replace a given auth token with a new one.
 - Changed UserTable.Authenticate to renew auth tokens instead of extending their validity.
+- Changed IRequest.RedirectUrl to accept URLs starting with http:// or https:// if the domain is the same or the domains share auth cookies according to the wildcard setting.
+- Changed IRequest.Domain to use the domain without the port (if present) instead of the full host string.
+- Added PluginManager.GetDomains().
+- Added plugin domains to the domains for AutoCertificate.
+- Added an option to pre-select an item in Selector.
 
 1.4.1 (2023-09-26)
 - Fixed that POST requests without forms cause an internal error that isn't being handled.
