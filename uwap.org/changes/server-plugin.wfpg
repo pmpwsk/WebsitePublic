@@ -3,6 +3,9 @@
 
 Changelog for ServerPlugin
 
+1.4.3.1 (2023-10-06)
+- Updated to the latest version of WebFramework and changed the mail stuff accordingly.
+
 1.4.3 (2023-09-25)
 - Updated to the latest version of WebFramework and changed the mail stuff accordingly.
 - "Send an email" now supports multiple recipients (separated by space, comma or semicolon).
