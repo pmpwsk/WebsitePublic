@@ -3,6 +3,9 @@
 
 Changelog for WebFramework
 
+1.5 (UPCOMING)
+- Added EventRequest for server-sent events to /event/... with Send(string) and KeepAlive(), as well the event and the method for plugins.
+
 1.4.2 (2023-10-06)
 - Added clear divs to elements with buttons so they no longer overflow if overflow is not set to hidden.
 - Added List<string> AccountManager.Settings.WildcardDomains to allow for auth cookies to be shared across a domain and its subdomains.
