@@ -123,7 +123,7 @@ div.nav {
     border-radius: 0.5rem;
     z-index: 1030;
     font-size: 0;
-    line-height: 1.2em;
+    line-height: 1.2rem;
     margin-top: 0.6rem;
 }
 
@@ -145,7 +145,7 @@ p {
     padding: 0;
     text-indent: -0.6rem;
     font-size: 1.05rem;
-    line-height: 1.2em;
+    line-height: 1.2rem;
     color: var(--foreground);
     font-family: var(--font-family);
 }
@@ -176,7 +176,7 @@ div.buttons a {
     text-decoration: none;
     padding: 0.15rem 0.45rem 0.25rem 0.45rem;
     font-size: 1.05rem;
-    line-height: 1.2em;
+    line-height: 1.2rem;
 }
 
 div.buttons {
@@ -205,7 +205,7 @@ a.green, div.green, div.buttons a.green {
 
 ul {
     font-size: 1.05rem;
-    line-height: 1.2em;
+    line-height: 1.2rem;
     color: var(--foreground);
     font-family: var(--font-family);
     margin: 0.15rem 0 0.15rem 0;
@@ -231,7 +231,7 @@ input, input:active, input:focus {
     color: var(--foreground);
     box-sizing: border-box;
     font-size: 1.05rem;
-    line-height: 1.2em;
+    line-height: 1.2rem;
     resize: none;
     display: block;
     width: 100%;
@@ -264,7 +264,32 @@ input[type="file"]::file-selector-button {
     text-decoration: none;
     padding: 0.15rem 0.45rem 0.25rem 0.45rem;
     font-size: 1.05rem;
-    line-height: 1.2em;
+    line-height: 1.2rem;
+}
+
+input[type="checkbox"] {
+    box-sizing: unset;
+    line-height: 1.2rem;
+    resize: unset;
+    width: unset;
+    margin: 0.15rem 0 0.15rem 0;
+    padding: 0;
+    outline: inherit;
+    display: inline-block;
+    height: 1rem;
+    position: relative;
+    top: 0.1rem;
+    accent-color: #179517;
+}
+label {
+    font-family: var(--font-family);
+    background: var(--background);
+    color: var(--foreground);
+    font-size: 1.05rem;
+    line-height: 1.2rem;
+    margin: 0.15rem 0 0.15rem 0.6rem;
+    padding: 0;
+    display: inline-block;
 }
 
 select, select:active, select:focus {
@@ -276,7 +301,7 @@ select, select:active, select:focus {
     border: none;
     border-radius: 0.3rem;
     font-size: 1.05rem;
-    line-height: 1.2em;
+    line-height: 1.2rem;
     margin: 0.3rem 0.05rem 0.25rem 0;
     padding: 0.15rem 0.45rem 0.25rem 0.45rem;
     outline: 0;
@@ -287,7 +312,7 @@ option {
     font-family: Arial;
     background: transparent;
     font-size: 1.05rem;
-    line-height: 1.2em;
+    line-height: 1.2rem;
 }
 
 div.clear {
