@@ -353,7 +353,6 @@ input[type="checkbox"] {
     outline: inherit;
     display: inline-block;
 }
-
 label {
     font-family: var(--font-family);
     background: var(--background);
