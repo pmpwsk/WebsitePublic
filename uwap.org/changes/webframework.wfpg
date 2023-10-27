@@ -6,6 +6,7 @@ Changelog for WebFramework
 1.5 (UPCOMING)
 - Added EventRequest for server-sent events to /event/... with Send(string) and KeepAlive(), as well the event and the method for plugins.
 - Added Checkbox (IContent) with string Text and bool Checked.
+- Changed the constructors for each container elements without any contents to accept individual contents as parameters.
 
 1.4.2 (2023-10-06)
 - Added clear divs to elements with buttons so they no longer overflow if overflow is not set to hidden.
