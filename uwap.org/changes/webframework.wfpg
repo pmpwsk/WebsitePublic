@@ -3,6 +3,11 @@
 
 Changelog for WebFramework
 
+1.5.0.1 (2023-10-31)
+- Added a missing space to the Image exporter.
+- Fixed the documentation for BulletList and OrderedList.
+- Added documentation for all of the MailAuth stuff.
+
 1.5 (2023-10-30)
 - Added EventRequest for server-sent events to /event/... with Send(string) and KeepAlive(), as well the event and the method for plugins.
 - Added Checkbox (IContent) with string Text and bool Checked.
