@@ -3,11 +3,15 @@
 
 Changelog for WebFramework
 
+1.5.1.2 (2023-11-07)
+- Added parameter string potentialMessageId to Mail.BeforeSendDelegate.
+- Changed MailManager.Out.Send to generate and pass over potential message IDs to BeforeSend for internal mail sending.
+
 1.5.1.1 (2023-11-07)
 - Added Dictionary<MailboxAddress,string> Internal to MailSendResult.
 - Added parameter out string log to Mail.BeforeSendDelegate.
-- Changed Mail.Out.Send to include logs from BeforeSend and check if there are any addresses left before attempting to send FromSelf.
-- Removed obsolete Mail.Out methods and changed some methods to be private as they are not needed outside anymore.
+- Changed MailManager.Out.Send to include logs from BeforeSend and check if there are any addresses left before attempting to send FromSelf.
+- Removed obsolete MailManager.Out methods and changed some methods to be private as they are not needed outside anymore.
 - Changed PresetHandler.WarningMail to use the new Mail.Out.Send method instead.
 
 1.5.1 (2023-11-07)
