@@ -3,6 +3,9 @@
 
 Changelog for WebFramework
 
+1.5.1 (2023-11-07)
+- Added event Mail.Out.BeforeSend to determine whether to send a mail message externally to a specific recipient. This allows for internal mail sending and filtering.
+
 1.5.0.2 (2023-11-05)
 - Added a check for Context.RequestAborted to EventRequest.KeepAlive.
 - Changed CheckDMARC to properly comply with the standard, it was too strict before.
