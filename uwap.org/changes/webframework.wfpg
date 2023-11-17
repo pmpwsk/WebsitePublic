@@ -4,6 +4,8 @@
 Changelog for WebFramework
 
 1.5.2 (2023-11-18)
+- Added string? MailAuth.CheckPTR(IPAddress).
+- Added string? PTR to MailAuth.FullResult.
 - Added method TryGetValue to AuthManager (User.Auth).
 - Optimized UserTable.Authenticate, TwoFactorData.Validate, DownloadRequest and SimpleResponseRequest.
 - Changed IRequest to make the public "User" non-nullable. Nullability can be checked using bool IRequest.LoggedIn.
@@ -14,6 +16,7 @@ Changelog for WebFramework
 - Added bool Config.Database.WriteBackOnLoad to decide whether to write the new JSON to the disk if it doesn't match the old one while loading a table (default: true).
 - Moved AccountManager.Settings to Server.Config.Accounts.
 - Changed everything in Server.Config to be a property instead of a field.
+- Updated to MailKit 4.3.0.
 - Updated to .NET 8.
 
 1.5.1.2 (2023-11-07)
