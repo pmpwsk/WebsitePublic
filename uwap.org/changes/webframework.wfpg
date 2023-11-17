@@ -5,7 +5,7 @@ Changelog for WebFramework
 
 1.5.2 (2023-11-18)
 - Added method TryGetValue to AuthManager (User.Auth).
-- Changed UserTable.Authenticate and TwoFactorData.Validate to be slightly more efficient.
+- Optimized UserTable.Authenticate, TwoFactorData.Validate, DownloadRequest and SimpleResponseRequest.
 - Changed IRequest to make the public "User" non-nullable. Nullability can be checked using bool IRequest.LoggedIn.
 - Added Server.Config.Log to contain settings to control what types of log entries will appear in the console.
 - Moved Server.Config.ShowAspNetLogs to Server.Config.Log.AspNet.
