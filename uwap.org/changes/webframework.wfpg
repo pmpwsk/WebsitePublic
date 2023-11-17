@@ -3,6 +3,19 @@
 
 Changelog for WebFramework
 
+1.5.2 (2023-11-18)
+- Added method TryGetValue to AuthManager (User.Auth).
+- Changed UserTable.Authenticate and TwoFactorData.Validate to be slightly more efficient.
+- Changed IRequest to make the public "User" non-nullable. Nullability can be checked using bool IRequest.LoggedIn.
+- Added Server.Config.Log to contain settings to control what types of log entries will appear in the console.
+- Moved Server.Config.ShowAspNetLogs to Server.Config.Log.AspNet.
+- Added Server.Log.Startup.
+- Added Server.Config.Log.AuthTokenExpired and AuthTokenRenewed.
+- Added bool Config.Database.WriteBackOnLoad to decide whether to write the new JSON to the disk if it doesn't match the old one while loading a table (default: true).
+- Moved AccountManager.Settings to Server.Config.Accounts.
+- Changed everything in Server.Config to be a property instead of a field.
+- Updated to .NET 8.
+
 1.5.1.2 (2023-11-07)
 - Added parameter string potentialMessageId to Mail.BeforeSendDelegate.
 - Changed MailManager.Out.Send to generate and pass over potential message IDs to BeforeSend for internal mail sending.
