@@ -6,6 +6,8 @@ Changelog for WebFramework
 1.5.2 (2023-11-18)
 - Added string? MailAuth.CheckPTR(IPAddress).
 - Added string? PTR to MailAuth.FullResult.
+- Added IPageElement Server.Config.Accounts.FailedAuth.BanMessage and applied it to Page.
+- Added a case for LoginState.Banned to PresetsHandler.AccountButton.
 - Added method TryGetValue to AuthManager (User.Auth).
 - Optimized UserTable.Authenticate, TwoFactorData.Validate, DownloadRequest and SimpleResponseRequest.
 - Changed IRequest to make the public "User" non-nullable. Nullability can be checked using bool IRequest.LoggedIn.
