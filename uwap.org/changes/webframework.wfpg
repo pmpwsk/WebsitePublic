@@ -3,6 +3,10 @@
 
 Changelog for WebFramework
 
+1.5.2.1 (2023-11-18)
+- Corrected documentation for IRequest.User.
+- Added bool IRequest HasUser.
+
 1.5.2 (2023-11-18)
 - Added string? MailAuth.CheckPTR(IPAddress).
 - Added string? PTR to MailAuth.FullResult.
