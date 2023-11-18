@@ -3,6 +3,14 @@
 
 Changelog for UsersPlugin
 
+1.2.3 (2023-11-18)
+- Updated to .NET 8.
+- Updated to the latest version of WebFramework.
+- Various optimizations.
+- Logging in after requesting account deletion now cancels the deletion.
+- Account recovery now works even if an account deletion has been requested.
+- Added a worker that deletes accounts that have requested their deletion at least 30 days ago.
+
 1.2.2.3 (2023-09-30)
 - Updated to the latest version of WebFramework and replaced 2FA stuff accordingly.
 
