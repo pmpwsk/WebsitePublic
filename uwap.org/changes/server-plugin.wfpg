@@ -3,6 +3,13 @@
 
 Changelog for ServerPlugin
 
+1.4.4 (2023-11-19)
+- Updated to .NET 8.
+- Updated to WF 1.5.2.1.
+- Various optimizations.
+- Added an error element for uploading to the main page.
+- Changed the updater to check if the file name matches, accept .zip files and add a log entry about the update.
+
 1.4.3.1 (2023-10-06)
 - Updated to the latest version of WebFramework and changed the mail stuff accordingly.
 
