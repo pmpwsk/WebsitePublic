@@ -3,6 +3,22 @@
 
 Changelog for WebFramework
 
+1.5.3 (2023-12-29)
+- Optimization for AccountManager and the worker.
+- Added more information to the default value of Server.Config.Accounts.FailedAuth.BanMessage.
+- Added the default value of Server.Config.Accounts.FailedAuth.BanMessage to its documentation.
+- Added bool Server.Config.Accounts.FailedAuth.LogBans (default: false).
+- Added bool FileSelector.AllowMultiple.
+- Made User.Auth and User.Settings enumerable.
+- Added Parsers.Before and After with a string as the separator.
+- Made the value of TextBox, TextArea and FlexibleTextArea HTML-safe.
+- Changed the 2FA validation to fully renew the token instead of just changing its properties.
+- Changed the mail token validation to renew the token.
+- Applied the actual expiration times for temporary tokens to cookies.
+- Added string? OnChange to Checkbox, FileSelector and Selector.
+- Added constructors that accepts multiple strings as paragraphs to ContainerElement, ContainerElementIsoTop, HeadingElement, LargeContainerElement and LargeContainerElementIsoTop.
+- Changed AccountManager.AddAuthTokenCookie to use path "/".
+
 1.5.2.1 (2023-11-18)
 - Corrected documentation for IRequest.User.
 - Added bool IRequest HasUser.
