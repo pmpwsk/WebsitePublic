@@ -1,5 +1,6 @@
->> title TCP library
->> import other-projects
+>> t TCP library
+>> d
+>> i other-projects
 
 TCP library
 Cross-platform .NET library written in C# that allows you to easily create server-client communication using TCP messages.

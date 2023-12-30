@@ -1,5 +1,6 @@
->> title RedirectPlugin
->> import other-projects
+>> t RedirectPlugin
+>> d Plugin for WebFramework that adds simple static redirects.
+>> i other-projects
 
 RedirectPlugin
 Plugin for <a href="/projects/webframework">WebFramework</a> that adds simple static redirects.

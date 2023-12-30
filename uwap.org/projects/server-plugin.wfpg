@@ -1,5 +1,6 @@
->> title ServerPlugin
->> import other-projects
+>> t ServerPlugin
+>> d Plugin for WebFramework that adds a simple interface to manage the program and server in general.
+>> i other-projects
 
 ServerPlugin
 Plugin for <a href="/projects/webframework">WebFramework</a> that adds a simple interface to manage the program and server in general.

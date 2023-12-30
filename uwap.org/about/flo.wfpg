@@ -1,5 +1,6 @@
->> title Flo
->> import news
+>> t Flo
+>> d Details about Flo, the creator of uwap.org.
+>> i news
 
 Flo
 Hi! I created uwap.org and all of the projects here (and many more).

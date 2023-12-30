@@ -1,5 +1,6 @@
->> title ReleaseCollector
->> import other-projects
+>> t ReleaseCollector
+>> d Visual Studio extension (VSIX) that publishes your .NET projects for various systems and collects the files in one folder (bin/v... with the highest version number or bin/latest if no version folder was found).
+>> i other-projects
 
 ReleaseCollector
 Visual Studio extension (VSIX) that publishes your .NET projects for various systems and collects the files in one folder (bin/v... with the highest version number or bin/latest if no version folder was found).

@@ -1,5 +1,6 @@
->> title UsersPlugin
->> import other-projects
+>> t UsersPlugin
+>> d Plugin for WebFramework that adds a simple interface to register, log in and manage your account settings.
+>> i other-projects
 
 UsersPlugin
 Plugin for <a href="/projects/webframework">WebFramework</a> that adds a simple interface to register, log in and manage your account settings.

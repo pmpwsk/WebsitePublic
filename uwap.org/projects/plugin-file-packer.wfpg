@@ -1,5 +1,6 @@
->> title PluginFilePacker
->> import other-projects
+>> t PluginFilePacker
+>> d Visual Studio extension (VSIX) that generates a WebFramework plugin file handler (FileHandler.cs) for the files in Files/.
+>> i other-projects
 
 PluginFilePacker
 Visual Studio extension (VSIX) that generates a <a href="/projects/webframework">WebFramework</a> plugin file handler (FileHandler.cs) for the files in Files/.

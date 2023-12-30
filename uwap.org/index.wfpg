@@ -1,8 +1,9 @@
->> title Useful Web App Project
->> import news
+>> t Useful Web App Project
+>> d
+>> i news
 
 Useful Web App Project | green
-This website is still in development, so some stuff is missing. Please be patient.
+Welcome to uwap.org! This project aims to provide useful web apps as well as the tools to easily create such web apps.
 
 Projects >> /projects
 Check out uwap.org's useful projects here!

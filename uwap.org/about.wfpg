@@ -1,5 +1,6 @@
-﻿>> title About
->> import news
+﻿>> t About
+>> d Learn more about uwap.org here.
+>> i news
 
 About
 uwap.org stands for "Useful Web App Project" and that's the goal of this project - to provide useful web apps and tools to make useful web apps yourself. That's not all it's about though, there are many other great <a href="/projects">projects</a> that are not just limited to the web. There is no financial goal behind the project.

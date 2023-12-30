@@ -1,5 +1,6 @@
->> title Finances
->> import news
+>> t Finances
+>> d A detailed list of uwap.org's expenses and income starting in 2023.
+>> i news
 
 Finances
 A detailed list of uwap.org's expenses and income starting in 2023. The currency is Euro (EUR). The entries are sorted by date, the most recent ones are at the top.

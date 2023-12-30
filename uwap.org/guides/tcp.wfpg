@@ -1,4 +1,5 @@
->> title TCP Guide
+>> t TCP Guide
+>> d Guide for the TCP library.
 
 TCP Guide
 The messages consist of text only (encoded in UTF-8) and end with a line break, so if you want to send bytes or a message with line breaks, you'll have to implement escape characters or something like base64 encoding on both ends.

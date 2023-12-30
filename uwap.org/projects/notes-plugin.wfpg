@@ -1,5 +1,6 @@
->> title NotesPlugin
->> import other-projects
+>> t NotesPlugin
+>> d Plugin for WebFramework that adds a simple notes app for users.
+>> i other-projects
 
 NotesPlugin
 Plugin for <a href="/projects/webframework">WebFramework</a> that adds a simple notes app for users.

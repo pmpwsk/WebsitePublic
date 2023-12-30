@@ -1,5 +1,6 @@
->> title Wrapper
->> import other-projects
+>> t Wrapper
+>> d
+>> i other-projects
 
 Wrapper
 Cross-platform program written in C# that launches and watches another executable.
