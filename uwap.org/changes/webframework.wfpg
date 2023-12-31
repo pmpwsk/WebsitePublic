@@ -4,6 +4,13 @@
 
 Changelog for WebFramework
 
+1.5.4 (UPCOMING)
+- Added Parsers.HtmlValueSafe as a method that escapes characters that might hurt the layout or exit the quotes for an HTML attribute value.
+- Changed Parsers.HtmlSafe to be more efficient and to escape \n as well.
+- Changed the following classes to be more efficient and HTML safe: Page, CustomPage, ButtonJS, ContainerElement, ContainerElementIsoTop, HeadingElement, Checkbox, FileSelector, FlexibleTextArea, Image, Paragraph, Selector, TextArea, TextBox.
+- Changed PageParser to use the next paragraph's text if the description command was used without a parameter.
+- Changed PageParser.ParseCommand to add abbreviations.
+
 1.5.3 (2023-12-29)
 - Optimization for AccountManager and the worker.
 - Added more information to the default value of Server.Config.Accounts.FailedAuth.BanMessage.
