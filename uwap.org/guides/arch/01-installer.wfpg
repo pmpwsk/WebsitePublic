@@ -29,6 +29,7 @@ List the possible layouts:<br/><code>localectl list-keymaps</code>
 Search the list for your country code (e.g. "de" for Germany):<br/><code>localectl list-keymaps | grep de</code>
 If you're still not sure, try searching the internet, maybe look for pictures of the possible keyboard layouts.
 Load the correct layout (e.g. "de-latin1"):<br/><code>loadkeys de-latin1</code>
+Make sure the correct keyboard layout is loaded by typing a bit (especially symbols) to see if they are the right keys.
 Note that this only temporarily sets the keyboard layout for the Arch installer, you will have to do this every time you boot the installer and later on during the installation as well, so remember what layout you used!
 
 Internet connection
