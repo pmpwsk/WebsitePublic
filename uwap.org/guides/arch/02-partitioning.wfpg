@@ -1,0 +1,20 @@
+>> t Partitioning - Arch Guide
+>> d Guide to partition your drive for Arch Linux.
+>> i arch-steps
+
+Arch Guide
+Prev | red >> /guides/arch/01-installer
+Next | green >> /guides/arch/03-installing
+
+02. Partitioning your drive | green
+
+BIOS type:
+Legacy | green >> /guides/arch/02-partitioning/legacy
+UEFI | green >> /guides/arch/02-partitioning/uefi
+
+Don't know which one you have?
+Run this: <code>ls /sys/firmware/efi</code>
+If it says <code>ls: cannot access '/sys/firmware/efi': No such file or directory</code>, you have a legacy BIOS.
+If it lists a bunch of names like <code>config_table efivars fw_platform_size fw_vendor runtime runtime_map systab</code>, you have a UEFI.
+In case you have a modern computer but it's not loading EFI stuff, you might be running your UEFI BIOS in legacy mode. Refer to your BIOS settings to figure that out.
+Remember what you have because we're going to need this once more later on!
