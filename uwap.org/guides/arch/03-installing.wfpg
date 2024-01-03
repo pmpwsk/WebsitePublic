@@ -1,0 +1,62 @@
+>> t Installing - Arch Guide
+>> d Guide to install the basics of Arch Linux after partitioning your drive accordingly.
+>> i arch-steps
+
+Arch Guide
+Prev | red >> /guides/arch/02-partitioning
+Next | green >> /guides/arch/04-configuration
+
+03. Installing the basics | green
+
+Identifying your partitions
+Run: <code>lsblk -o NAME,SIZE | grep [DISK]</code>
+The output will look similar to this:<br/><code>sda  128G</code><br/><code>-sda1  512M</code><br/><code>-sda2  127.5G</code>
+Here's another example (with other partitions in the front):<br/><code>nvme0n1  250G</code><br/><code>-nvme0n1p1  1G</code><br/><code>-nvme0n1p2  512M</code><br/><code>-nvme0n1p3  100G</code><br/><code>-nvme0n1p4  512M</code><br/><code>-nvme0n1p5  148G</code>
+The partition's names end with a number. In the case of drives that start with <code>nvme</code>, there is usually a <code>p</code> between the disk name and partition number.
+The second last partition (e.g. <code>sda1</code> / <code>nvme0n1p4</code> in the examples) is the boot partition. The device path would be something like <code>/dev/sda1</code>.
+The last partition (e.g. <code>sda2</code> / <code>nvme0n1p5</code> in the examples) is the data/root partition. The device path would be something like <code>/dev/sda2</code>.
+Remember those two partition names! Whenever you see [BOOT], replace it with the name of the boot partition (e.g. <code>sda1</code>). Replace [DATA] with the data/root partition (e.g. <code>sda2</code>).
+
+Do you want disk encryption?
+If you use disk encryption, you will have to enter the disk's password every time you boot Arch for added security. <i>If you don't want that, skip this step and future steps for disk encryption.</i>
+The data/root partition will be encrypted, the boot partition will not.
+Note: This guide will not help you set this up if you choose GRUB as a boot loader - only if you use EFISTUB (direct kernel booting), which isn't available on legacy BIOS!
+Load the necessary modules:<br/><code>modprobe dm-crypt</code><br/><code>modprobe dm-mod</code>
+Format the data partition for encryption:<br/><code>cryptsetup luksFormat -v -s 512 -h sha512 /dev/[DATA]</code>
+Enter a password of your choice. Make sure that it's secure and you'll remember it.
+Load the encrypted partition:<br/><code>cryptsetup open /dev/[DATA] root</code><br/>Enter the same password.
+From now on, <code>[DATA]</code> will be <code>mapper/root</code>, so if <code>/dev/[DATA]</code> comes up, you need to use <code>/dev/mapper/root</code> instead of something like <code>/dev/sda2</code>. The old <code>[DATA]</code> will be called <code>[DATA_OLD]</code> in the next disk encryption steps.
+
+Formatting the partitions
+Format the boot partition as FAT32:<br/><code>mkfs.fat -F 32 /dev/[BOOT]</code>
+Format the data partition as EXT4 (remember to use <code>/dev/mapper/root</code> if you're using encryption):<br/><code>mkfs.ext4 /dev/[DATA]</code>
+
+Mounting the partitions
+We are going to use the directory <code>/mnt</code> (already exists but it's empty) as the path that will be the root path <code>/</code> (we can't use that since the ISO stuff is in there). In the future, the current <code>/mnt/some/path</code> will be <code>/some/path</code>.
+So first, let's mount the root partition to <code>/mnt</code> (will be <code>/</code>):<br/><code>mount /dev/[DATA] /mnt</code>
+The boot partition will be mounted at <code>/boot</code> in the future, so we have to mount it in <code>/mnt/boot</code>. That directory doesn't exist yet, so we have to create it first:<br/><code>mkdir /mnt/boot</code>
+Now we can mount the boot partition, too:<br/><code>mount /dev/[BOOT] /mnt/boot</code>
+
+Installing the basics
+Now it's time to actually install something:<br/><code>pacstrap -K /mnt base linux linux-firmware nano</code>
+The packages are:
+- <code>base</code>: The very basic Arch installation.
+- <code>linux</code>: The standard Linux kernel (instead of <code>linux</code>, you can use <a href="https://wiki.archlinux.org/title/kernel#Officially_supported_kernels" target="_blank" rel="nofollow">another kernel</a> like <code>linux-lts</code>, <code>linux-hardened</code>, <code>linux-zen</code>, ..., just remember which one you installed because we'll need it later!).
+- <code>linux-firmware</code>: The necessary firmware.
+- <code>nano</code>: A simple text editor, we'll need it for the setup.
+If that command fails, try the troubleshooting solution <a href="#troubleshooting-pacstrap-is-failing">below</a>!
+
+Generating the file system table
+The file system table (fstab) tells the system what partitions to mount during the startup and where to mount them.
+You can generate it by running:<br/><code>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</code>
+
+| green >> /guides/arch/04-configuration
+Next: Initial configuration
+
+[Troubleshooting] pacstrap is failing!
+Skip this step if the <code>pacstrap...</code> command above didn't fail.
+If you have an issue with pacstrap, it might be because your time is messed up, at least that happened to me before. Here's how I managed to resolve it...
+Edit the time sync configuration:<br/><code>nano /etc/systemd/timesyncd.conf</code>
+Modify it to look like this (you only need to remove <code>#</code> from two lines):<br/><code>[Time]</code><br/><code>NTP=0.arch.pool.ntp.org 1.arch.pool.ntp.org 2.arch.pool.ntp.org 3.arch.pool.ntp.org</code><br/><code>FallbackNTP=0.arch.pool.ntp.org 1.arch.pool.ntp.org 2.arch.pool.ntp.org 3.arch.pool.ntp.org</code>
+Now run the following command to restart the time service:<br/><code>systemctl restart systemd-timesyncd.service</code>
+You can check if the time (at least UTC) is correct now by running <code>timedatectl</code>. If it is, try the <code>pacstrap...</code> command from above again and continue from there.
