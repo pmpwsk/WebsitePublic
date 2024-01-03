@@ -1,0 +1,42 @@
+>> t Installer - Arch Guide
+>> d Guide to set up the installer for Arch Linux.
+>> i arch-steps
+
+Arch Guide
+Back | red >> /guides/arch
+Next | green >> /guides/arch/02-partitioning
+
+01. Setting up the installer | green
+
+Creating a boot medium
+First, download the ISO file: <a href="https://archlinux.org/download/" target="_blank" rel="nofollow">https://archlinux.org/download/</a>
+On that page, you can either choose to download the image using a torrent (this is the preferred way) or using a mirror (towards the bottom of the page, find one for your country). Choose the file called <code>archlinux-[DATE]-x86_64.iso</code> and validate it using the signature (the .sig file, if you feel like it).
+Now, either load the ISO into your virtual machine software of choice or write it to a USB drive or DVD using something like <a href="http://rufus.ie/en/" target="_blanket" rel="nofollow">Rufus</a> or <a href="https://etcher.balena.io/" target="_blanket" rel="nofollow">balenaEtcher</a>.
+Once that's done, make sure "Secure boot" is disabled in your BIOS, select the drive you created and boot from it.
+Wait until you see <code>root@archiso ~ # _</code> pop up and blink on the screen (root is red).
+
+In case you're new to this kind of environment...
+The left side of the blinking underscore is your cursor, it is waiting for you to enter commands (press enter to execute a given command after typing it in). You can use your arrow keys to move it left and right, up and down switches between recently executed commands.
+<code>root</code> stands for the current user that is logged in, root is essentially the administrator account.
+<code>archiso</code> stands for your hostname (your computer's name on the network).
+<code>~</code> stands for the current directory you are in (~ is short for the logged in user's home/personal folder, the path is /home/[USERNAME] or /root if the user is "root").
+We will be installing a graphical user interface later on, don't worry.
+
+Keyboard layout
+Note that you only need to do this if your keyboard does not use the standard US layout.
+If you don't know how to enter the following commands, look up a picture of a/your keyboard with the US layout and press the corresponding keys.
+List the possible layouts:<br/><code>localectl list-keymaps</code>
+Search the list for your country code (e.g. "de" for Germany):<br/><code>localectl list-keymaps | grep de</code>
+If you're still not sure, try searching the internet, maybe look for pictures of the possible keyboard layouts.
+Load the correct layout (e.g. "de-latin1"):<br/><code>loadkeys de-latin1</code>
+Note that this only temporarily sets the keyboard layout for the Arch installer, you will have to do this every time you boot the installer and later on during the installation as well, so remember what layout you used!
+
+Internet connection
+For the installation, it is best to use an ethernet connection. If you really have to use Wi-Fi, follow the steps here to connect to your network:<br/><a href="https://wiki.archlinux.org/title/Iwd#iwctl" target="_blank" rel="nofollow">https://wiki.archlinux.org/title/Iwd#iwctl</a>
+Make sure your IP address makes sense and the state for the network adapter you intend to use is UP (green) in the output of the following command:<br/><code>ip address</code>
+Now try to connect to a server of your choice (e.g. uwap.org) to test your connection:<br/><code>ping uwap.org</code>
+The output should look something like this, otherwise you're not properly connected:<br/><code>PING uwap.org (2a01:4f8:c012:bcd7::1) 56 data bytes</code><br/><code>64 bytes from uwap.org (2a01:4f8:c012:bcd7::1): icmp_seq=1 ttl=58 time=23.0 ms</code><br/><code>64 bytes from uwap.org (2a01:4f8:c012:bcd7::1): icmp_seq=2 ttl=58 time=22.1 ms</code><br/><code>64 bytes from uwap.org (2a01:4f8:c012:bcd7::1): icmp_seq=3 ttl=58 time=22.7 ms</code>
+Once you know you're connected, you can press <code>Ctrl+C</code> to stop the ping program.
+
+| green >> /guides/arch/02-partitioning
+Next: Partition your drive
