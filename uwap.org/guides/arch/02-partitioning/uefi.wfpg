@@ -24,7 +24,7 @@ First sector: Press enter to place the partition as far to the start as possible
 Last sector: Enter <code>+512M</code> to make the partition 512MB in size (it adds the size of 512MB to the first sector, that's why there's a +). 512MB should be adequate for this purpose.
 Hex code: Enter <code>EF00</code> to make it an EFI partition (so your BIOS can recognize it as bootable).
 
-Creating a root partition
+Creating a data/root partition
 This partition will contain everything else and can use any supported file system (we'll use EXT4 later).
 Run <code>n</code> again and use the default values for partition number and first sector.
 For the last sector, use the default value (just press enter) to make the partition use the entire rest of the disk, or enter something like <code>+64G</code> to make the partition 64GB in size (this will leave some space for other partitions, in case you need that).

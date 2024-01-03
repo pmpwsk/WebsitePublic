@@ -31,7 +31,7 @@ We need to do this so your BIOS recognizes that it can boot from the newly creat
 Run <code>a</code> to do that.
 The output should look like this:<br/><code>The bootable flag on partition 1 is enabled now.</code>
 
-Creating a root partition
+Creating a data/root partition
 This partition will contain everything else and can use any supported file system (we'll use EXT4 later).
 Run <code>n</code> again and use the default values for partition type, number and first sector. For the last sector, use the default value (just press enter) to make the partition use the entire rest of the disk, or enter something like <code>+64G</code> to make the partition 64GB in size (this will leave some space for other partitions, in case you need that).
 
