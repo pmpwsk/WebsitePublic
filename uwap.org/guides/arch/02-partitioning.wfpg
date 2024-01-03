@@ -8,9 +8,13 @@ Next | green >> /guides/arch/03-installing
 
 02. Partitioning your drive | green
 
-BIOS type:
-Legacy | green >> /guides/arch/02-partitioning/legacy
+Now choose your BIOS type...
+
+Legacy BIOS | green >> /guides/arch/02-partitioning/legacy
+This is what old computers and modern computers in legacy mode use.
+
 UEFI | green >> /guides/arch/02-partitioning/uefi
+This is what modern computers use, unless they are set to legacy mode.
 
 Don't know which one you have?
 Run this: <code>ls /sys/firmware/efi</code>

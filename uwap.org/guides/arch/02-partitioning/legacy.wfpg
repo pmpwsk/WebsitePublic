@@ -1,0 +1,45 @@
+>> t Partitioning (Legacy) - Arch Guide
+>> d Guide to partition your drive (for legacy BIOS) for Arch Linux.
+>> i arch-steps
+
+Arch Guide
+Back | red >> /guides/arch/02-partitioning
+Next | green >> /guides/arch/03-installing
+
+02. Partitioning your drive (Legacy BIOS) | green
+Remember that wherever it says <code>sda</code>, use whatever drive name you figured out in the last step instead!
+
+Starting fdisk
+fdisk is the disk partitioning tool we will use for MBR/DOS partition tables.
+Start it like this: <code>fdisk /dev/sda</code>
+
+Creating a new partition table
+Note: If you don't want to overwrite all of the data on your drive, resize your existing partitions to make space for new partitions and skip this step.
+Enter <code>o</code> and press enter to create a new table.
+The output should look something like this:<br/><code>Created a new DOS (MBR) disklabel with disk identifier 0xdc2f49ba.</code>
+
+Creating a boot partition
+This partition will contain your kernel, initramfs and possibly a boot loader. It needs to have a special format (we'll use FAT32 later) so your BIOS can read it, as it's the part the BIOS loads at first. We're making this its own partition so we can use a better file system (like EXT4) for the rest of the data.
+Run <code>n</code> to start the creation of a new partition.
+Partition type: Press enter to use the default partition type (p for primary).
+Partition number: Press enter to use the first available partition number (should be 1 if your drive is empty).
+First sector: Press enter to place the partition as far to the start as possible.
+Last sector: Enter <code>+512M</code> to make the partition 512MB in size (it adds the size of 512MB to the first sector, that's why there's a +). 512MB should be adequate for this purpose.
+Now, the output should be something like this:<br/><code>Created a new partition 1 of type 'Linux' and of size 512MiB.</code>
+
+Marking the boot partition as bootable
+We need to do this so your BIOS recognizes that it can boot from the newly created partition.
+Run <code>a</code> to do that.
+The output should look like this:<br/><code>The bootable flag on partition 1 is enabled now.</code>
+
+Creating a root partition
+This partition will contain everything else and can use any supported file system (we'll use EXT4 later).
+Run <code>n</code> again and use the default values for partition type, number and first sector. For the last sector, use the default value (just press enter) to make the partition use the entire rest of the disk, or enter something like <code>+64G</code> to make the partition 64GB in size (this will leave some space for other partitions, in case you need that).
+
+Saving and exiting fdisk
+Enter <code>w</code> to write the changes to the drive. This will also exit fdisk.
+The output should look like this:<br/><code>The partition table has been altered.</code>
+If you made a mistake, you can discard the changes and exit using <code>q</code> instead.
+
+| green >> /guides/arch/03-installing
+Next: Installing the basics

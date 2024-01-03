@@ -10,6 +10,8 @@ Changelog for WebFramework
 - Changed the following classes to be more efficient and HTML safe: Page, CustomPage, ButtonJS, ContainerElement, ContainerElementIsoTop, HeadingElement, Checkbox, FileSelector, FlexibleTextArea, Image, Paragraph, Selector, TextArea, TextBox.
 - Changed PageParser to use the next paragraph's text if the description command was used without a parameter.
 - Changed PageParser.ParseCommand to add abbreviations.
+- Fixed the "a" field for CheckSPF and IPv6 for Parsers.Domain(c).
+- Added Parsers.PluginHome(string) and DomainMain(string).
 
 1.5.3 (2023-12-29)
 - Optimization for AccountManager and the worker.

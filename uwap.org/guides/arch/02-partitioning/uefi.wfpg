@@ -1,0 +1,10 @@
+>> t Partitioning (UEFI) - Arch Guide
+>> d Guide to partition your drive (for UEFI) for Arch Linux.
+>> i arch-steps
+
+Arch Guide
+Back | red >> /guides/arch/02-partitioning
+Next | green >> /guides/arch/03-installing
+
+02. Partitioning your drive (UEFI) | green
+Remember that wherever it says <code>sda</code>, use whatever drive name you figured out in the last step instead!
