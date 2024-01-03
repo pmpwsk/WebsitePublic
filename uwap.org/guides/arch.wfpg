@@ -7,4 +7,6 @@ This guide will help you to install and use Arch Linux, while giving you a few o
 The official guide can be found <a href="https://wiki.archlinux.org/title/Installation_guide" target="_blank" rel="nofollow">here</a>. It generally has more details, but it's quite hard to understand for new users.
 There's an easier way to install Arch (using the archinstall script), but I prefer this way as it gives you more flexibility, makes you understand how the system works and how to change certain things later on.
 
-Nothing to see here yet! | red
+01. Setting up the installer >> /guides/arch/01-installer
+
+More steps will follow soon! | red
