@@ -60,7 +60,7 @@ body {
 }
 
 code {
-    padding: 0.1rem 0.4rem;
+    padding: 0.1rem 0.2rem;
     border-radius: 0.4rem;
     box-shadow: 0 0.15rem 0.2rem -0.1rem var(--shadow);
     font-family: var(--font-code);
