@@ -14,7 +14,7 @@ This should output a list of your drives like this:<br/><code>sda  VMware Virtua
 In this case, it means:
 - I have a disk called <code>VMware Virtual S</code> that is 128GB in size, the current name for it is <code>sda</code>.
 - I have a disk called <code>Samsung 960 Evo</code> that is 250GB in size, the current name for it is <code>nvme0n1</code>.
-Remember the name of the drive you want to install Arch onto (e.g. <code>sda</code>). The drive will be referred to as <code>/dev/sda</code> (that's the device path). Wherever it says <code>sda</code> in the rest of the guide, use whatever drive name you figured out in the last step instead!
+Remember the name of the drive you want to install Arch onto (e.g. <code>sda</code>). The drive will be referred to as <code>/dev/sda</code> (that's the device path). Wherever it says <code>[DISK]</code> in the rest of the guide, use whatever drive name you figured out in the last step instead!
 
 Now choose your BIOS type...
 

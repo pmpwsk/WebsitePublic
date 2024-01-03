@@ -7,11 +7,10 @@ Back | red >> /guides/arch/02-partitioning
 Next | green >> /guides/arch/03-installing
 
 02. Partitioning your drive (Legacy BIOS) | green
-Remember that wherever it says <code>sda</code>, use whatever drive name you figured out in the last step instead!
 
 Starting fdisk
 fdisk is the disk partitioning tool we will use for MBR/DOS partition tables.
-Start it like this: <code>fdisk /dev/sda</code>
+Start it like this: <code>fdisk /dev/[DISK]</code> (e.g. <code>fdisk /dev/sda</code>)
 
 Creating a new partition table
 Note: If you don't want to overwrite all of the data on your drive, resize your existing partitions to make space for new partitions and skip this step.

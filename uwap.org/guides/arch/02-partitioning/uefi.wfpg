@@ -7,11 +7,10 @@ Back | red >> /guides/arch/02-partitioning
 Next | green >> /guides/arch/03-installing
 
 02. Partitioning your drive (UEFI) | green
-Remember that wherever it says <code>sda</code>, use whatever drive name you figured out in the last step instead!
 
 Starting gdisk
 gdisk is the disk partitioning tool we will use for GPT partition tables.
-Start it like this: <code>gdisk /dev/sda</code>
+Start it like this: <code>gdisk /dev/[DISK]</code> (e.g. <code>fdisk /dev/sda</code>)
 
 Creating a new partition table
 Note: If you don't want to overwrite all of the data on your drive, resize your existing partitions to make space for new partitions and skip this step.
