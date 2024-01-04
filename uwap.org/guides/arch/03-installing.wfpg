@@ -58,5 +58,6 @@ Skip this step if the <code>pacstrap...</code> command above didn't fail.
 If you have an issue with pacstrap, it might be because your time is messed up, at least that happened to me before. Here's how I managed to resolve it...
 Edit the time sync configuration:<br/><code>nano /etc/systemd/timesyncd.conf</code>
 Modify it to look like this (you only need to remove <code>#</code> from two lines):<br/><code>[Time]</code><br/><code>NTP=0.arch.pool.ntp.org 1.arch.pool.ntp.org 2.arch.pool.ntp.org 3.arch.pool.ntp.org</code><br/><code>FallbackNTP=0.arch.pool.ntp.org 1.arch.pool.ntp.org 2.arch.pool.ntp.org 3.arch.pool.ntp.org</code>
+Exit <code>nano</code> while saving by pressing <code>Ctrl+X</code>, then <code>y</code> to save and press enter to confirm the file name.
 Now run the following command to restart the time service:<br/><code>systemctl restart systemd-timesyncd.service</code>
 You can check if the time (at least UTC) is correct now by running <code>timedatectl</code>. If it is, try the <code>pacstrap...</code> command from above again and continue from there.
