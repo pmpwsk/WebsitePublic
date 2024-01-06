@@ -12,6 +12,10 @@ Changelog for WebFramework
 - Changed PageParser.ParseCommand to add abbreviations.
 - Fixed the "a" field for CheckSPF and IPv6 for Parsers.Domain(c).
 - Added Parsers.PluginHome(string) and DomainMain(string).
+- Added SameSite to auth cookies for wildcard domains as well.
+- Added bool Server.Config.Accounts.SameSiteStrict=false to indicate whether to use SameSite=Strict instead of Lax.
+- Added bool Server.Config.Accounts.HttpOnly=true to indicate whether authentication cookies should only be accessible for HTTP requests (not from JavaScript directly).
+- Changed AddAuthTokenCookie to be more efficient.
 
 1.5.3 (2023-12-29)
 - Optimization for AccountManager and the worker.
