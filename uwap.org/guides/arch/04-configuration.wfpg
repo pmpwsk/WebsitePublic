@@ -7,3 +7,16 @@ Prev | red >> /guides/arch/03-installing
 Next | green >> /guides/arch/05-boot
 
 04. Initial configuration | green
+
+How to create and edit text files
+We previously installed the text editor <code>nano</code>. To start nano with a given file name (the file you want to create or edit) like <code>/some/file</code>, run:<br/><code>nano /some/file</code>
+Once again, the left side of the flashing rectangle is your cursor. Moving it over the top/bottom scrolls up/down one line. Using the page up/down keys on your keyboard scrolls up/down one screen height worth of lines.
+After you're done editing or entering text, press <code>Ctrl+X</code> to exit, then <code>Y</code> to save and press enter to confirm the file name we already entered while starting <code>nano</code>.
+<br/>
+There's a faster way to write some text to a file (without <code>nano</code>):
+To overwrite <code>/some/file</code> with text <code>[text]</code>, run:<br/><code>echo [text] &gt; /some/file</code>
+If your text contains spaces, you need to put quotes around it like this:<br/><code>echo "Hello world!" &gt; /some/file</code>
+The same applies to file names containing spaces:<br/><code>echo [text] &gt; "/etc/some file"</code>
+In case you want to write the text as a new line at the back of the existing file contents instead of replacing them, use <code>&gt;&gt;</code> instead of <code>&gt;</code>:<br/><code>echo "new line" &gt;&gt; /some/file</code>
+<br/>
+To output a file's contents, use <code>cat</code>. For <code>/some/file</code>, you'd need to run:<br/><code>cat /some/file</code>
