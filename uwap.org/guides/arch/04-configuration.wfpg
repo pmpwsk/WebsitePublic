@@ -20,3 +20,7 @@ The same applies to file names containing spaces:<br/><code>echo [text] &gt; "/e
 In case you want to write the text as a new line at the back of the existing file contents instead of replacing them, use <code>&gt;&gt;</code> instead of <code>&gt;</code>:<br/><code>echo "new line" &gt;&gt; /some/file</code>
 <br/>
 To output a file's contents, use <code>cat</code>. For <code>/some/file</code>, you'd need to run:<br/><code>cat /some/file</code>
+
+Entering the environment
+We will now temporarily change our root directory to <code>/mnt</code>, so we'll essentially run commands on our Arch installation.
+You can do that by running:<br/><code>arch-chroot /mnt /bin/bash</code>
