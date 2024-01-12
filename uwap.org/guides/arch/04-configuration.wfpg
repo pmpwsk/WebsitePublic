@@ -66,3 +66,7 @@ You can do this in one command (like described above):<br/><code>echo "LANG=en_U
 Setting the keyboard layout
 We need to set the keyboard layout for a second time, you can use the same keyboard code as at the start of the guide.
 Set it by writing something like <code>KEYMAP=de-latin1</code> to <code>/etc/vconsole.conf</code>.
+
+Setting the hostname
+Your hostname is the name other computers on your network can see.
+You can set it by writing it (nothing else) to <code>/etc/hostname</code>.
