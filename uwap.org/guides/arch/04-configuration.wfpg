@@ -80,3 +80,7 @@ Edit the <code>HOOKS=...</code> line in <code>/etc/mkinitcpio.conf</code> in a w
 The line should look more or less like this:<br/><code>HOOKS=(base udev autodetect modconf kms keyboard keymap consolefont block encrypt filesystems fsck)</code>
 Once that's done, run (if you're using a kernel other than <code>linux</code>, replace it with your kernel's name):<br/><code>mkinitcpio -p linux</code>
 [Troubleshooting] If the first attempt of entering your disk password is always wrong (later on) because it's using the wrong keyboard layout, edit the <code>HOOKS=...</code> line to either move <code>keymap</code> in front of <code>autodetect</code> or remove <code>autodetect</code> entirely, then run the <code>mkinitcpio</code> command again.
+
+Exiting the environment
+To leave the <code>/mnt</code> environment again, run:<br/><code>exit</code>
+Note that you don't need to do this if you're planning to use <code>GRUB</code> as a boot manager in the next step since that step starts by entering the <code>/mnt</code> environment again.
