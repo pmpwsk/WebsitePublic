@@ -24,3 +24,7 @@ To output a file's contents, use <code>cat</code>. For <code>/some/file</code>, 
 Entering the environment
 We will now temporarily change our root directory to <code>/mnt</code>, so we'll essentially run commands on our Arch installation.
 You can do that by running:<br/><code>arch-chroot /mnt /bin/bash</code>
+
+Installing sudo
+<code>sudo</code> can be used to run things as the user <code>root</code> without logging in as such (because you shouldn't do everything as the <code>root</code> user), of course only if the current account is permitted to use <code>sudo</code>, we'll set that up later.
+To install sudo, run:<br/><code>pacman -S sudo</code>
