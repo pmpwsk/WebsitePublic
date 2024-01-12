@@ -37,3 +37,7 @@ Installing NetworkManager
 We will use <code>NetworkManager</code> to handle and configure our network connection. If you want, you can also use something like <code>dhcpcd</code> instead.
 You can install <code>NetworkManager</code> by running:<br/><code>pacman -S networkmanager</code>
 We also need to enable the corresponding service so it's loaded when we boot our system:<br/><code>systemctl enable NetworkManager</code>
+
+Setting a root password
+In order to log in after booting, we need to set a password for the user <code>root</code> by running:<br/><code>passwd</code>
+You will have to enter the same password twice and you won't see any characters you're typing (or that you're typing anything at all), just press enter after each password entry.
