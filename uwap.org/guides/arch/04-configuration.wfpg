@@ -28,3 +28,7 @@ You can do that by running:<br/><code>arch-chroot /mnt /bin/bash</code>
 Installing sudo
 <code>sudo</code> can be used to run things as the user <code>root</code> without logging in as such (because you shouldn't do everything as the <code>root</code> user), of course only if the current account is permitted to use <code>sudo</code>, we'll set that up later.
 To install sudo, run:<br/><code>pacman -S sudo</code>
+
+NTFS support
+If you'd like to be able to use drives formatted as NTFS (such as drives with Windows installations and most large drives formatted using Windows or for Windows usage), you need to add support for it to your Arch installation.
+You can do that by installing <code>ntfs-3g</code> like so:<br/><code>pacman -S ntfs-3g</code>
