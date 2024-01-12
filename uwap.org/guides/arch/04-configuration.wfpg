@@ -41,3 +41,12 @@ We also need to enable the corresponding service so it's loaded when we boot our
 Setting a root password
 In order to log in after booting, we need to set a password for the user <code>root</code> by running:<br/><code>passwd</code>
 You will have to enter the same password twice and you won't see any characters you're typing (or that you're typing anything at all), just press enter after each password entry.
+
+Setting the time
+First, we'll need to set the correct time zone. These are usually named after big cities near you (such as Berlin in Europe for Germany's time zone or names such as "Central Time".
+If you're not sure, simply search "[your city] time zone" online. If you find something like "Central European Time" (not present), look up a datasheet for time zones (like <a href="https://gist.github.com/alejzeis/ad5827eb14b5c22109ba652a1a267af5" target="_blank" rel="nofollow">here</a>) and search for the name you found.
+To list possible groups of time zones (such as "Europe" or "US"), run:<br/><code>ls -d /usr/share/zoneinfo/*/</code>
+To list time zones in a group (e.g. Europe), run:<br/><code>ls /usr/share/zoneinfo/Europe</code>
+Once you've found the correct time zone file (e.g. Europe/Berlin), set it as the one to use by running:<br/><code>ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime</code>
+After that's done, sync your hardware clock (RTC) by running:<br/><code>hwclock --systohc</code>
+If you are dual-booting with Windows, you should set your hardware clock to use the local time instead of UTC (because Windows uses the local time and can't really deal with an RTC set to UTC):<br/><code>timedatectl set-local-rtc 1</code>
