@@ -58,3 +58,7 @@ Once you've found your desired locale, you need to uncomment the lines that star
 For example, if you want to use <code>en_US</code> with character encodings <code>UTF-8</code> and <code>ISO-8859-1</code>, make it look like this:<br/><code>#...</code><br/><code>#en_SG ISO-8859-1</code><br/><code>en_US.UTF-8 UTF-8</code><br/><code>en_US ISO-8859-1</code><br/><code>#en_ZA.UTF-8 UTF-8</code><br/><code>#...</code>
 Save and exit <code>nano</code>.
 Now, apply the change by running:<br/><code>locale-gen</code>
+
+Setting the language
+Set your system language to use one of the locales you uncommented (e.g. <code>en_US.UTF-8</code>, I recommend UTF-8) by writing something like <code>LANG=en_US.UTF-8</code> to <code>/etc/locale.conf</code>.
+You can do this in one command (like described above):<br/><code>echo "LANG=en_US.UTF-8" > /etc/locale.conf</code>
