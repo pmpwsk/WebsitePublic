@@ -50,3 +50,11 @@ To list time zones in a group (e.g. Europe), run:<br/><code>ls /usr/share/zonein
 Once you've found the correct time zone file (e.g. Europe/Berlin), set it as the one to use by running:<br/><code>ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime</code>
 After that's done, sync your hardware clock (RTC) by running:<br/><code>hwclock --systohc</code>
 If you are dual-booting with Windows, you should set your hardware clock to use the local time instead of UTC (because Windows uses the local time and can't really deal with an RTC set to UTC):<br/><code>timedatectl set-local-rtc 1</code>
+
+Setting the locale
+Open the file <code>/etc/locale.gen</code> in <code>nano</code> (like described at the top of the page). If you want your locale to be English for the US, look for <code>en_US</code>.
+To search in <code>nano</code>, press <code>Ctrl+W</code>, enter whatever you're looking for (like <code>en_US</code>) and press enter. It will relocate the cursor to the first/next instance of the search term (as long as it found it).
+Once you've found your desired locale, you need to uncomment the lines that start with that code by removing the <code>#</code> in the beginning of those lines.
+For example, if you want to use <code>en_US</code> with character encodings <code>UTF-8</code> and <code>ISO-8859-1</code>, make it look like this:<br/><code>#...</code><br/><code>#en_SG ISO-8859-1</code><br/><code>en_US.UTF-8 UTF-8</code><br/><code>en_US ISO-8859-1</code><br/><code>#en_ZA.UTF-8 UTF-8</code><br/><code>#...</code>
+Save and exit <code>nano</code>.
+Now, apply the change by running:<br/><code>locale-gen</code>
