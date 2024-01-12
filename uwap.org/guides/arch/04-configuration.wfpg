@@ -84,3 +84,6 @@ Once that's done, run (if you're using a kernel other than <code>linux</code>, r
 Exiting the environment
 To leave the <code>/mnt</code> environment again, run:<br/><code>exit</code>
 Note that you don't need to do this if you're planning to use <code>GRUB</code> as a boot manager in the next step since that step starts by entering the <code>/mnt</code> environment again.
+
+| green >> /guides/arch/05-boot
+Next: Boot setup
