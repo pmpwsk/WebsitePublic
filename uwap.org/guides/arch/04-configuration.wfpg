@@ -62,3 +62,7 @@ Now, apply the change by running:<br/><code>locale-gen</code>
 Setting the language
 Set your system language to use one of the locales you uncommented (e.g. <code>en_US.UTF-8</code>, I recommend UTF-8) by writing something like <code>LANG=en_US.UTF-8</code> to <code>/etc/locale.conf</code>.
 You can do this in one command (like described above):<br/><code>echo "LANG=en_US.UTF-8" > /etc/locale.conf</code>
+
+Setting the keyboard layout
+We need to set the keyboard layout for a second time, you can use the same keyboard code as at the start of the guide.
+Set it by writing something like <code>KEYMAP=de-latin1</code> to <code>/etc/vconsole.conf</code>.
