@@ -70,3 +70,6 @@ Set it by writing something like <code>KEYMAP=de-latin1</code> to <code>/etc/vco
 Setting the hostname
 Your hostname is the name other computers on your network can see.
 You can set it by writing it (nothing else) to <code>/etc/hostname</code>.
+
+Adding localhost to /etc/hosts
+To be able to reach your own computer as <code>localhost</code>, add the following two lines to <code>/etc/hosts</code> (replace [TAB] with a press of the tab key):<br/><code>127.0.0.1[TAB]localhost[TAB][YOUR HOSTNAME]</code><br/><code>::1[TAB]localhost[YOUR HOSTNAME]</code>
