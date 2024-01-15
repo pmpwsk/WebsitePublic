@@ -1,10 +1,9 @@
 >> title Example page
 >> description This is an example page to show people how .wfpg files work.
 
-#This page uses the "Code" theme regardless of the user's preference, first we'll clear the existing styles
+#This page uses the black and green flat theme with monospace font regardless of the user's preference, first we'll clear the existing styles
 >> style
->> style /styles/default-sb.css
->> style /styles/code.css
+>> style /api/account/theme.css?f=ubuntu-mono&b=black&a=green&d=flat
 #>>script /i/dont/have/any/ideas/for/a/script/here.js
 
 #Navigation button with class "right" to /
