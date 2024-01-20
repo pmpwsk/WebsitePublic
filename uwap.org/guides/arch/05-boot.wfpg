@@ -9,3 +9,6 @@ Next | green >> /guides/arch/06-booting
 05. Boot setup | green
 
 Choose your desired boot method...
+
+EFISTUB | green >> /guides/arch/05-boot/efistub
+This boots the kernel directly, without a boot menu. Note that EFISTUB is only available on UEFI-based computers, not legacy BIOS.
