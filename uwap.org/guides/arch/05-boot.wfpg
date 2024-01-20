@@ -12,3 +12,6 @@ Choose your desired boot method...
 
 EFISTUB | green >> /guides/arch/05-boot/efistub
 This boots the kernel directly, without a boot menu. Note that EFISTUB is only available on UEFI-based computers, not legacy BIOS.
+
+GRUB | green >> /guides/arch/05-boot/grub
+This boots into a boot menu with options to boot Arch or other operating systems you may have installed. Note that this guide will not help you set up "Secure boot" and disk encryption with GRUB (only EFISTUB) since the process for that is significantly more complicated.
