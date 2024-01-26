@@ -7,3 +7,7 @@ Back | red >> /guides/arch/05-boot
 Next | green >> /guides/arch/06-booting
 
 05. Boot setup (GRUB) | green
+
+Entering the environment
+Just like in the previous step, we need to temporarily change our root directory to <code>/mnt</code> by running:<br/><code>arch-chroot /mnt /bin/bash</code>
+Skip this if you didn't exit the environment in the first place!
