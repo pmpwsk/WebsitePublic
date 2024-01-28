@@ -11,3 +11,6 @@ Next | green >> /guides/arch/06-booting
 Entering the environment
 Just like in the previous step, we need to temporarily change our root directory to <code>/mnt</code> by running:<br/><code>arch-chroot /mnt /bin/bash</code>
 Skip this if you didn't exit the environment in the first place!
+
+Installing the GRUB package
+To install the GRUB package, run:<br/><code>pacman -S grub</code>
