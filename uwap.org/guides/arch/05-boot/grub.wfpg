@@ -22,3 +22,6 @@ For UEFI, run:<br/><code>grub-install --target=x86_64-efi --efi-directory=/boot 
 Changing the boot menu timeout
 If you want to change the duration of how long the boot menu is displayed, edit <code>/etc/default/grub</code> and change the line <code>GRUB_TIMEOUT=5</code> to contain the desired duration in seconds. Setting it to 0 disables it altogether.
 Once that's done, run:<br/><code>grub-mkconfig -o /boot/grub/grub.cfg</code>
+
+| green >> /guides/arch/06-booting
+Next: Booting the system
