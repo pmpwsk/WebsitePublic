@@ -15,7 +15,7 @@ Here's another example (with other partitions in the front):<br/><code>nvme0n1  
 The partition's names end with a number. In the case of drives that start with <code>nvme</code>, there is usually a <code>p</code> between the disk name and partition number.
 The second last partition (e.g. <code>sda1</code> / <code>nvme0n1p4</code> in the examples) is the boot partition. The device path would be something like <code>/dev/sda1</code>.
 The last partition (e.g. <code>sda2</code> / <code>nvme0n1p5</code> in the examples) is the data/root partition. The device path would be something like <code>/dev/sda2</code>.
-Remember those two partition names! Whenever you see [BOOT], replace it with the name of the boot partition (e.g. <code>sda1</code>). Replace [DATA] with the data/root partition (e.g. <code>sda2</code>).
+Remember those two partition names! Whenever you see <code>[BOOT]</code>, replace it with the name of the boot partition (e.g. <code>sda1</code>). Replace <code>[DATA]</code> with the data/root partition (e.g. <code>sda2</code>).
 
 Do you want disk encryption?
 If you use disk encryption, you will have to enter the disk's password every time you boot Arch for added security. <i>If you don't want that, skip this step and future steps for disk encryption.</i>
