@@ -7,3 +7,12 @@ Back | red >> /guides/arch/05-boot
 Next | green >> /guides/arch/06-booting
 
 05. Boot setup (EFISTUB) | green
+
+You should use the data partition's UUID!
+If you use the <code>[DATA]</code> (or <code>[DATA_OLD]</code> in case of encryption) we determined before, you might see your system becoming unable to boot if your disk configuration changes in the future (if that happened to you, you need to boot the Arch ISO again, identify your partition's new name and create a new boot entry for it).
+To avoid this, you should identify the partition by its UUID instead.
+To find the UUID for your partition, run:<br/><code>lsblk -o NAME,UUID | grep [DATA]</code><br/>(use <code>[DATA_OLD]</code> if you're using encryption!)
+The output will look something like this:<br/><code>-sda2 abdee473-74a6-4fb0-8130-6ccc4e66711a</code>
+Now you can use <code>/dev/disk/by-uuid/[UUID]</code> instead of <code>/dev/[DATA]</code> (or <code>/dev/[DATA_OLD]</code>).
+Since the UUIDs tend to be pretty long, you should use the autocompletion feature to save yourself some work and make sure you didn't make any typing mistakes. You can do that by typing <code>/dev/disk/by-uuid/</code> and then the first few letters of the UUID, then press TAB. It should complete your input to the UUID you found out, then you can add the rest of the command to the start and end of that.
+If pressing TAB doesn't insert the entire UUID, you probably didn't give it enough of the characters to clearly differentiate the partition from others, or you mistyped the first few characters.
