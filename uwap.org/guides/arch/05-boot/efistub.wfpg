@@ -16,3 +16,6 @@ The output will look something like this:<br/><code>-sda2 abdee473-74a6-4fb0-813
 Now you can use <code>/dev/disk/by-uuid/[UUID]</code> instead of <code>/dev/[DATA]</code> (or <code>/dev/[DATA_OLD]</code>).
 Since the UUIDs tend to be pretty long, you should use the autocompletion feature to save yourself some work and make sure you didn't make any typing mistakes. You can do that by typing <code>/dev/disk/by-uuid/</code> and then the first few letters of the UUID, then press TAB. It should complete your input to the UUID you found out, then you can add the rest of the command to the start and end of that.
 If pressing TAB doesn't insert the entire UUID, you probably didn't give it enough of the characters to clearly differentiate the partition from others, or you mistyped the first few characters.
+
+Without encryption
+Run this to create a boot entry called "Arch" for your installation in your UEFI BIOS:<br/><code>efibootmgr --create --disk /dev/[DISK] --part [PARTITION NUMBER OF BOOT] --label "Arch" --loader /vmlinuz-linux --unicode "root=/dev/[DATA] rw initrd=\initramfs-linux.img"</code>
