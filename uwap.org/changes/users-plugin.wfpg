@@ -4,6 +4,9 @@
 
 Changelog for UsersPlugin
 
+1.3 (2024-02-10)
+- Added included themes and more control over themes.
+
 1.2.3 (2023-11-18)
 - Updated to .NET 8.
 - Updated to the latest version of WebFramework.
