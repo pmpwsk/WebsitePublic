@@ -4,7 +4,7 @@
 
 Changelog for WebFramework
 
-1.5.4 (UPCOMING)
+1.5.4 (2024-02-10)
 - Added Parsers.HtmlValueSafe as a method that escapes characters that might hurt the layout or exit the quotes for an HTML attribute value.
 - Changed Parsers.HtmlSafe to be more efficient and to escape \n as well.
 - Changed the following classes to be more efficient and HTML safe: Page, CustomPage, ButtonJS, ContainerElement, ContainerElementIsoTop, HeadingElement, Checkbox, FileSelector, FlexibleTextArea, Image, Paragraph, Selector, TextArea, TextBox.
@@ -16,6 +16,12 @@ Changelog for WebFramework
 - Added bool Server.Config.Accounts.SameSiteStrict=false to indicate whether to use SameSite=Strict instead of Lax.
 - Added bool Server.Config.Accounts.HttpOnly=true to indicate whether authentication cookies should only be accessible for HTTP requests (not from JavaScript directly).
 - Changed AddAuthTokenCookie to be more efficient.
+- Added a case for plugin files without a timestamp to ScriptOrStyle.Export.
+- Removed Themes and ThemeName(...) from Presets and PresetsHandler.
+- Added _-+. to the allowed table key characters.
+- Added MailManager.DnsServersCloudflare as a possible option for MailManager.DnsServers.
+- Added MailManager.In.TryStart.
+- Changed the WFPG parser to append lines that start with <br/> but aren't only <br/> to the last paragraph if one exists, instead of creating a new paragraph.
 
 1.5.3 (2023-12-29)
 - Optimization for AccountManager and the worker.
