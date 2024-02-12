@@ -29,3 +29,6 @@ In case you want to add kernel parameters, append them within the last quotes li
 Checking if a boot entry was actually created
 Run this command and see whether the label and unicode part of what you just entered appears:<br/><code>efibootmgr --unicode</code>
 If nothing like what you entered is listed or you got an error message when running the command to add the boot entry in the first place, you probably made a typing mistake.
+
+| green >> /guides/arch/06-booting
+Next: Booting the system
