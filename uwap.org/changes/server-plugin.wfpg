@@ -4,6 +4,18 @@
 
 Changelog for ServerPlugin
 
+2.0 (2024-03-03)
+- Updated to WF 2.0.
+- Replaced the plugin settings with bool EnableBackups, EnableSSH, EnableMail, EnableWrapper, EnableWrapperLogClearing and added corresponding constructor parameters (default: true).
+- Added pages to manage WF backups.
+- Added an API interface to access WF backups using a headless client (for off-site backups).
+- Categorized everything into Backups, SSH, Mail and Wrapper (besides worker calling).
+- Changed the structure/layout of everything to be more polished and coherent.
+- Added a menu for the categories to the sidebar.
+- Added an event, script and method to have a live status of the server on all pages where it makes sense.
+- Added an event and script to the log page so the page is refreshed when the log file has been changed (up to 10 minutes late, but right away for cached pages after being re-opened).
+- Various optimizations.
+
 1.4.4 (2023-11-19)
 - Updated to .NET 8.
 - Updated to WF 1.5.2.1.
