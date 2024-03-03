@@ -4,6 +4,13 @@
 
 Changelog for NotesPlugin
 
+1.2.5 (2024-03-03)
+- Updated to WF 2.0.
+- Added compliance with the WF backup feature.
+- Changed the directory structure to group notes by user, not just by user table (this greatly simplifies backups) and added backwards compatibility for the old structure.
+- Added the option to move notes.
+- Various optimizations.
+
 1.2.4.1 (2023-11-19)
 - Updated to .NET 8.
 - Updated to WF 1.5.2.1.
