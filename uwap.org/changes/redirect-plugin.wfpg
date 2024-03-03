@@ -4,6 +4,10 @@
 
 Changelog for RedirectPlugin
 
+1.0.1.2 (2024-03-03)
+- Updated to WF 2.0
+- Various optimizations.
+
 1.0.1.1 (2023-11-19)
 - Updated to .NET 8.
 - Updated to WF 1.5.2.1.
