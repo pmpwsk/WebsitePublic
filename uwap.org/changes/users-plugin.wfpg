@@ -4,6 +4,16 @@
 
 Changelog for UsersPlugin
 
+1.3.1 (2024-03-03)
+- Updated to WF 2.0.
+- Fixed an issue with /dl/2fa-recovery.
+- Added /api/get-username.
+- The email verification links from emails now work even when being opened in a browser that isn't logged into the account that is being verified.
+- Added an access level setting to /users.
+- Added a page for applications to request limited auth tokens and settings to manage granted ones.
+- Fixed the background color of labels in layers.css.
+- Various optimizations.
+
 1.3 (2024-02-10)
 - Added included themes and more control over themes.
 
