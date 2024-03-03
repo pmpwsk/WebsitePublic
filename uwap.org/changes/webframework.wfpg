@@ -4,6 +4,47 @@
 
 Changelog for WebFramework
 
+2.0 (2024-03-03)
+- Added string Parsers.ToBase64(string) and string FromBase64(string).
+- Added Server.Config.Backup with bool Enabled (default: false), string Directory, DayOfWeek FreshDay and TimeSpan Time.
+- Added Table.EnumerateOtherFiles and EnumerateOtherDirectories to enumerate other things that are associated with a given database entry while it is being backed up.
+- Changed Table.Backup to have parameters in order to be compatible with the new backup functionality.
+- Changed Table.Backup to print errors to the console instead of returning them as a dictionary.
+- Added void IPlugin.Backup, Plugin.Backup, ITable.Backup, Tables.BackupAll and PluginManager.Backup.
+- Added void IPlugin.Restore, Plugin.Restore, ITable.Restore, Tables.RestoreAll and PluginManager.Restore.
+- Added bool Server.BackupRunning and RestoreRunning.
+- Added backup functionality to the worker.
+- Added Server.BackupNow(forceFresh) and Restore(string id).
+- Added class BackupTree with Encode().
+- Added class BackupPartInfo with Load(id), Finish(), BackupFile(path) and BackupDirectory(path).
+- Added class RestorePartInfo with Load(id) and Restore().
+- Added delegate BackupHandler and RestoreHandler.
+- Added events BackupAlmostDone and RestoreAlmost done.
+- Added bool QueryManager.TryGetValue<T>(string key, out T value) and T? QueryManager.TryGet<T>(string key).
+- Added List<string> IRequest.Domains and changed every reference of Parsers.Domains(string) to use the list from the current request object instead of calculating it again. Parsers.Domains(string) is being called in the "Init" layer.
+- Added LayerDelegate and LayerRequestData.
+- Added layers Init, LetsEncrypt, HttpsRedirect, Redirect, File, Auth and Handler.
+- Added Server.Config.Layers.
+- Changed the middleware to use the layers instead.
+- Optimized the layers' old code.
+- Changed request constructors to only pass on a LayerRequestData object.
+- Added string? FriendlyName and ReadOnlyCollection<string>? LimitedToPaths to AuthTokenData and modified the methods that use it accordingly.
+- Added AccountManager.GenerateAuthTokenCookieOptions and changed AddAuthTokenCookie to use it.
+- Added AuthManager.AddNewLimited.
+- Added a constructor to BulletList and OrderedList that accepts items as IEnumerable<string>.
+- Added status codes 301 and 302 to Server.Config.StatusMessages.
+- Added bool Flatten to Script and Style (settings this to true always exports the code directly to the page instead of potentially referencing it).
+- Changed PluginManager.GetPlugin to also return the domain.
+- Changed the title part of Page.Export to also include the title extension on error pages.
+- Added code to Page.Export to export .wfpg for status/error pages if present (e.g. placed in Public/example.com/status/404.wfpg, "any.wfpg" also works as a fallback and [STATUS] and [MESSAGE] insert the status code and associated message).
+- Updated to SmtpServer 10.0.1.
+- Replaced MailboxFilterResult MailManager.In.AcceptMail with bool MailboxExists.
+- Added bool MailManager.In.HasCertificate.
+- Added X509Certificate2? Server.GetCertificate(string domain).
+- Changed the mail server to use a certificate factory instead of needing a restart whenever a new certificate is received for the mail server domain.
+- Added bool MailManager.In.TryRestart().
+- Various optimizations.
+
 1.5.4 (2024-02-10)
 - Added Parsers.HtmlValueSafe as a method that escapes characters that might hurt the layout or exit the quotes for an HTML attribute value.
 - Changed Parsers.HtmlSafe to be more efficient and to escape \n as well.
