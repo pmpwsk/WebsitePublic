@@ -4,6 +4,10 @@
 
 Changelog for ServerPlugin
 
+2.0.0.2 (2024-03-04)
+- Fixed an issue with missing resources.
+- Changed "refresh" in messages on /wrapper to be clickable in order to refresh the page.
+
 2.0 (2024-03-03)
 - Updated to WF 2.0.
 - Replaced the plugin settings with bool EnableBackups, EnableSSH, EnableMail, EnableWrapper, EnableWrapperLogClearing and added corresponding constructor parameters (default: true).
