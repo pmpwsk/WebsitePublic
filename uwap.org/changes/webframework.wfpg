@@ -4,6 +4,9 @@
 
 Changelog for WebFramework
 
+2.0.0.1 (2024-03-18)
+- Added ToBase64PathSafe and FromBase64PathSafe and replaced the calls to ToBase64 and FromBase64 in BackupPartInfo and RestorePartInfo with those.
+
 2.0 (2024-03-03)
 - Added string Parsers.ToBase64(string) and string FromBase64(string).
 - Added Server.Config.Backup with bool Enabled (default: false), string Directory, DayOfWeek FreshDay and TimeSpan Time.
