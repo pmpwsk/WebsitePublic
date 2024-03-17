@@ -4,6 +4,10 @@
 
 Changelog for UsersPlugin
 
+1.3.1.3 (2024-03-18)
+- Added an email notification when a limited token is generated.
+- Changed /api/get-username to return status 403 when not logged in instead of "Not logged in.".
+
 1.3.1.2 (2024-03-04)
 - Fixed an issue with missing resources.
 
