@@ -8,12 +8,12 @@ Installation
 - Create a folder for the entire application and enter it
 - Create a subfolder Live/ and place the program to be watched in there (this is where the current version is always kept)
 - Create a subfolder Wrapper/ and place the Wrapper binary in there
-- Create a file Wrapper.config according to the guide (see above, at least TargetFile must be set)
+- Create a file Wrapper.config according to the guide (see above, at least Target must be set)
 - Execute the Wrapper binary in Wrapper/ (maybe create a service for it)
 
 Configuration
 This is done in Wrapper.config, each possible line consists of a key and a value like <code>key=value</code>.
-<code>TargetFile=MyProgram</code> sets the path of the target program relative to Live/ (required!).
+<code>Target=MyProgram</code> sets the path of the target program relative to Live/ (required!).
 <code>Arguments=arg1 arg2</code> sets the launch arguments for the target program (default: none).
 <code>AutoRestart=true</code> automatically restarts the target when it exits (default: false). To temporary prevent this, you can use the command <code>wrapper set AutoRestart=false</code>.
 <code>LogFile=Wrapper.log</code> sets the location of the log file to write to (default: no log file).
