@@ -1,8 +1,19 @@
 >> t pmpwsk
 >> d Personal website of pmpwsk, the creator of uwap.org.
 >> i news-universal
+>> style
+>> style /account/theme/b/black.css
+>> style /account/theme/d/flat.css
+>> style /account/theme/f/ubuntu-mono.css
+>> style /account/theme/a/green-dark.css
+>> style /font.css
+>> nav
+^^ pmpwsk >> /
+^^ uwap.org >> https://uwap.org
+^^ GitHub >> https://github.com/pmpwsk
 
-pmpwsk
+
+pmpwsk | green
 Hi! I created <a href="https://uwap.org" target="_blank">uwap.org</a> and all of the projects there (and many more).
 
 Contact
@@ -12,7 +23,7 @@ GitHub: <a href="https://github.com/pmpwsk" target="_blank">pmpwsk</a>
 
 |
 15rem | The most important uwap.org employee >> /images/flo.jpg
-Expand >> https://pmpwsk.com/images/flo
+<a href="/images/flo.jpg">Expand</a>
 
 Work experience
 - Freelance programming (occasionally, over 4 years and ongoing)
@@ -27,7 +38,7 @@ Education
 - English for business (C2, highest possible)
 - Currently in the 5th semester to become a computer science bachelor
 
-My skills...
+My skills... | green
 Below are some categorized lists of what I can do, along with subjective ratings over how much of those things I feel like I know.
 
 Languages
@@ -55,13 +66,13 @@ Environments
 - Windows Forms (7/10)
 - WPF (6/10)
 - Visual Studio extensions / VSIX (3/10)
-- .NET MAUI (learning)
+- Visual Studio Code extensions (3/10)
 
 Software
 - Git (5/10)
 - Visual Studio (7/10)
 - Visual Studio Code (6/10)
-- Arch Linux (5/10)
+- Arch Linux (6/10)
 - Debian Linux (5/10)
 - Windows Server (pi/10)
 - Microsoft Office (6/10)
