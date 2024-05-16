@@ -2,8 +2,11 @@
 >> d Visual Studio extension (VSIX) that publishes your .NET projects for various systems and collects the files in one folder (bin/v... with the highest version number or bin/latest if no version folder was found).
 >> i other-projects
 
-ReleaseCollector
+ReleaseCollector for Visual Studio
 Visual Studio extension (VSIX) that publishes your .NET projects for various systems and collects the files in one folder (bin/v... with the highest version number or bin/latest if no version folder was found).
+
+Version for Visual Studio Code >> /projects/release-collector-vsc
+There are significant differences between the VS and VSC version of this extension.
 
 Repository on GitHub >> https://github.com/pmpwsk/ReleaseCollector
 
