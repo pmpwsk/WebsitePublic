@@ -1,0 +1,87 @@
+>> t .wfpg Guide
+>> d This guide explains how to take advantage of .wfpg files for WebFramework servers to easily create mostly static pages without writing any C# or HTML.
+
+How to use .wfpg files
+WebFramework page files allow you to easily create mostly static pages without writing any C# or HTML, you just drop the files into ../Public. They are intended to be easily human-readable as raw text files, surrounding it with WF only adds some functionality and styles by using the page layout and style set in the preset (Presets.Handler, CreatePage and Navigation are used).
+
+| >> /guides/webframework
+Other WebFramework guides
+
+| green
+View an example page and its source document:
+Page | green >> /guides/webframework/wfpg-example
+Source | green >> /guides/webframework/wfpg-example.wfpg
+
+Paths
+As mentioned above, you place the file for https://uwap.org/test/page in ../Public/uwap.org/test/page.wfpg (or "any" instead of "uwap.org").
+For root pages, you don't create a file like uwap.org/.wfpg as that would create a hidden file. Instead, you do it like most servers for HTML do it - https://uwap.org/ uses uwap.org/index.wfpg. Going to /index will result in a 404 Not Found error. The same goes for subdirectories, e.g. https://uwap.org/test/ uses uwap.org/test/index.wfpg.
+
+Commands
+Commands start with &gt;&gt; and usually require an argument, here are some possible commands:
+<code>&gt;&gt; title This is the page title</code>
+<code>&gt;&gt; description This is a description for search engines and link integrations.</code><br/>If no argument is provided, the text of the next paragraph that is read will be used as the description.
+<code>&gt;&gt; script /scripts/test.js</code>
+<code>&gt;&gt; style https://uwap.org/styles/default.css</code><br/><code>&gt;&gt;script</code> and <code>&gt;&gt;style</code> without an argument clears all existing scripts/styles.
+<code>&gt;&gt; redirect https://uwap.org</code> redirects to another website (mailto URLs work too).
+Using <code>&gt;&gt; import any/test</code>, you can call other .wfpg files (like any/test.wfpg here - in ../Private as well). Avoid circular calls!
+If a command requires multiple arguments, they are separated using |, e.g. <code>&gt;&gt; command a1 | a2 | a3</code>
+Whether you put a space after the &gt;&gt; is entirely your choice, both <code>&gt;&gt;cmd a|b</code> and <code>&gt;&gt; cmd a | b</code> work just fine. You can also put spaces/tabs in front of lines if you want.
+
+Comments
+Comments start with #. Note that only entire lines can be comments, there can't be comments at the end of a line and there can't be multi-line comments unless each line start with #.
+
+Empty lines
+An empty line indicates that the currently open element is done, the next line will add a completely new element.
+
+Container elements
+These can contain different kinds of content, those will be listed below.
+The first line is used as the title of the container. If it's the first element on the page, the title will be large. Following lines will add content or buttons to the container.
+
+Paragraphs
+This is as easy as typing the paragraph as a line while a container is open.
+
+Bullet lists
+Equally easy, just add a - in front of each line that should be a bullet.
+
+Buttons
+Buttons are either small within an open container or a new element (which can have one following paragraph) if no container is open (see "Empty lines").
+Here's a basic button:<br/><code>Button1 &gt;&gt; /test</code>
+Here's a button with a class (red):<br/><code>Button2 | red &gt;&gt; https://uwap.org</code>
+Buttons can also execute JavaScript code, like this:<br/><code>Button3 &gt;&gt; javascript:alert("Hello world!")</code>
+If a link starts with http:// or https:// (not with / or #), newtab and nofollow (for SEO) will be added.
+
+Images
+Images are always a type of content. If no container is open, a new one is created without a title. Their syntax is similar to buttons.
+Here's a basic image with max-height 20rem:<br/><code>20rem &gt;&gt; /test.jpg</code>
+Here's an image with a tooltip:<br/><code>20rem | Some image &gt;&gt; https://uwap.org/test.jpg</code>
+
+Element IDs
+IDs are generated automatically for each container element by modifying the title text. Special characters are removed, spaces are replaced with dashes and letters are made lowercase. This way, you can provide navigational links to different parts of a long page.
+
+Sidebar
+You can add stuff to the sidebar by putting << in front of each of the usual lines (because it's on the left side). All normal elements (buttons, containers with paragraphs/images/lists, smaller buttons within containers, ...) work, but they look a bit different.
+Container and button elements don't get titles, their text is inserted as a paragraph or subtext. That means that buttons can only have one proper line of text. There's one exception: If the first sidebar element is a container, the provided text will be the title (the same size as a normal container title, not like a heading).
+Command to clear the sidebar: <code>&gt;&gt;sidebar</code>
+Command to populate the sidebar with buttons to navigate to each element's title (with a heading "Navigation:"): <code>&gt;&gt;sidebar populate</code><br/>If you don't want the heading, use <code>&gt;&gt;sidebar fill</code> instead.
+Command to highlight any button that links to the current page: <code>&gt;&gt;sidebar highlight</code><br/>This turns the button(s) green (class 'green') by default, you can specify a different class like this: <code>&gt;&gt;sidebar highlight|red</code>
+
+Navigation bar
+You can add buttons (no subtext, no containers!) to the navigation bar by putting ^^ in front of the usual line for a button (because it's on top), JavaScript also works.
+The navigation bar contains the items from your preset by default (only a home button if no custom preset was added). To remove all existing navbar buttons, use the command <code>&gt;&gt;nav</code>
+
+Abbreviations for commands
+You can use these instead of the commands listed above.
+- title: t
+- description: d
+- import: i
+- sidebar: s
+- redirect: r
+- nav: n
+For JavaScript buttons, you can use <code>js:command()</code> instead of <code>javascript:command()</code>.
+
+What if I make a mistake?
+If the parser can't recognize something in the .wfpg file, it usually ignores it or prints control parts if no control parts were expected.
+
+>> import guide-end
+
+>> sidebar populate
