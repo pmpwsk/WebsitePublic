@@ -10,7 +10,7 @@ Other WebFramework guides
 | green
 View an example page and its source document:
 Page | green >> /guides/webframework/wfpg-example
-Source | green >> /guides/webframework/wfpg-example.wfpg
+Source | green >> https://github.com/pmpwsk/WebsitePublic/blob/master/uwap.org/guides/webframework/wfpg-example.wfpg
 
 Paths
 As mentioned above, you place the file for https://uwap.org/test/page in ../Public/uwap.org/test/page.wfpg (or "any" instead of "uwap.org").
