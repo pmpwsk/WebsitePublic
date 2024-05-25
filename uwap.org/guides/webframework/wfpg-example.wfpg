@@ -22,9 +22,9 @@ Go home >> /
 
 250px | Well-known image >> /images/chicken-and-cat.jpg
 Here's some more text.
-Alert me! | red >> alert('hey!')
+Alert me! | red >> javascript:alert('hey!')
 
-Alert me! | red >> alert('hey!')
+Alert me! | red >> js:alert('hey!')
 Text for a button
 Only one line can be the text of a button, so this is a new container!
 
