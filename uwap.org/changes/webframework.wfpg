@@ -4,6 +4,19 @@
 
 Changelog for WebFramework
 
+2.1 (2024-05-26)
+- Changed Server.ParsePage(AppRequest, Page, CacheEntry) to (now public!) ParseIntoPage(AppRequest, Page, IEnumerable<string>) and moved the check for empty descriptions to it.
+- Added "neat" versions of the handler methods to Plugin. Those return the status code, allowing for a neater code. Additionally, the preset is called in the AppRequest handler. Returning 0 or 200 doesn't set any status code, -1 redirects to the login page for AppRequests. After writing has started, only 0/200 may be used for requests other than AppRequest.
+- Merged UploadRequest into PostRequest to allow for request body limit setting by handlers.
+- Renamed bool PostRequest.HasForm to IsForm.
+- Added long? PostRequst.BodySizeLimit.
+- Added Server.Config.ConfigureKestrel and ConfigureServices.
+- Fixed BackupNecessary in order to not leave broken chains.
+- Changed the handler layer to also direct example.com/dl to download handlers, same thing for events and API.
+- Added IFormFile.ToArray.
+- Added Parsers.VersionString(Assembly).
+- Changed the .wfpg parser to allow relative path URLs, treat full URLs of the same domain as the same site and use javascript: or js: as a prefix for JavaScript button targets.
+
 2.0.0.1 (2024-03-18)
 - Added ToBase64PathSafe and FromBase64PathSafe and replaced the calls to ToBase64 and FromBase64 in BackupPartInfo and RestorePartInfo with those.
 
