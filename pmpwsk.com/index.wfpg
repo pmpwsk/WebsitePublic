@@ -2,10 +2,10 @@
 >> d Personal website of pmpwsk, the creator of uwap.org.
 >> i news
 >> style
->> style /account/theme/b/black.css
->> style /account/theme/d/flat.css
->> style /account/theme/f/ubuntu-mono.css
->> style /account/theme/a/green-dark.css
+>> style https://account.uwap.org/theme/b/black.css
+>> style https://account.uwap.org/theme/d/flat.css
+>> style https://account.uwap.org/theme/f/ubuntu-mono.css
+>> style https://account.uwap.org/theme/a/green-dark.css
 >> style /font.css
 >> nav
 ^^ pmpwsk >> /
