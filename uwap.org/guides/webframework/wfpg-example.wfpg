@@ -3,7 +3,7 @@
 
 #This page uses the black and green flat theme with monospace font regardless of the user's preference, first we'll clear the existing styles
 >> style
->> style /api/account/theme.css?f=ubuntu-mono&b=black&a=green&d=flat
+>> style https://account.uwap.org/theme.css?f=ubuntu-mono&b=black&a=green&d=flat
 #>>script /i/dont/have/any/ideas/for/a/script/here.js
 
 #Navigation button with class "right" to /
