@@ -4,6 +4,14 @@
 
 Changelog for ServerPlugin
 
+2.1 (2025-02-23)
+- Moved to the MIT license.
+- Updated to WF 3.0.
+- Updated to .NET 9.
+- Added back buttons to all pages.
+- Changed the status event to still say when the worker is scheduled when a reboot is required.
+- Various other improvements.
+
 2.0.0.2 (2024-03-04)
 - Fixed an issue with missing resources.
 - Changed "refresh" in messages on /wrapper to be clickable in order to refresh the page.
