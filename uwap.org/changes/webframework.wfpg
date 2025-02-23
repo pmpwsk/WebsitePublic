@@ -4,6 +4,55 @@
 
 Changelog for WebFramework
 
+3.0 (2025-02-23)
+- Moved to the MIT license.
+- Updated to .NET 9.
+- Unified all request types into one general request type.
+- Fixed parsing of long TXT records for mail authentication.
+- Replaced Plugin.HandleNeatly with signal exceptions (HttpStatusSignal, NotFoundSignal, ForbiddenSignal, ..., RedirectSignal, RedirectToLoginSignal).
+- Added a request parameter to Presets.GetSupportEmail, WarningMail and AddSupportButton.
+- Added bool PresetsHandler.PreloadFont and string? Favicon.
+- Changed Presets.CreatePage to always add favicon, styles and navigation, and set req.Page to the new page.
+- Added string LayerRequestData.Method.
+- Removed the content type from LetsEncryptLayer because Request.Finish does that.
+- Added a check to ensure files are only served for GET requests.
+- Added status 503 (service unavailable) and RetryAfter=10 (seconds) to the PauseRequests message.
+- Added string PresetsHandler.UsersPluginPath(Request) and made previous mentions of /account dependent on it.
+- Replaced Server.Config.Accounts.LoginPath with string Presets.LoginPath(Request).
+- Changed Request.RedirectToLogin to include the protocol and domain in the redirect query.
+- Removed code limiting paths to the mail verification or 2FA path if either one is required.
+- Removed Server.Config.Accounts.TwoFactorPath, MailVerifyPath and LoginAllowedPaths.
+- Added Content-Length to Request.WriteBytes(AsDownload) and WriteFile(AsDownload).
+- Added Request.ForceGET, ForcePOST, ForceLogin and ForceAdmin.
+- Added Request.CreatePage with various overloads as a shortcut for Presets.CreatePage.
+- Changed Request.RedirectUrl, Presets.RedirectScript and .wfpg's "redirect" command to be laxer.
+- Added Presets.RedirectQueryScript and SendRequestScript.
+- Changed PluginManager.GetPlugin so prefixes now include the protocol and domain.
+- Added Parsers.FormatPath and QueryStringSuffix.
+- Changed ScriptOrStyle.Export and Page.Export to find references with queries, relative paths and domains.
+- Changed PresetsHandler.AccountButton to treat login states Needs2FA and NeedsMailVerification differently because the user isn't forced to be on the corresponding pages anymore.
+- Changed the file and handler layer to let through all known HTTP methods instead of just GET and POST, and let ones other than GET pass to the handlers even if a GET request to the same path would be handled with a file.
+- Changed Presets.Styles's out parameter "fontUrl" to be nullable and changed the default implementation to return an empty list instead of throwing an exception.
+- Changed limited tokens to use full paths including the protocol.
+- Added a check for MailManager.In.ServerRunning to the MailManager.In.Stop() call in Server.Exit().
+- Changed Request.Write to not set the content type to plain text if a content type has already been set.
+- Added CancellationToken Server.StoppingToken (along with StoppingTokenSource and LifetimeService to make it work).
+- Changed Request.KeepEventAlive to stop when the program is stopping and optimized the abortion mechanism.
+- Added '=' to Tables.KeyChars.
+- Added event Func<Request, Task>? Request.KeepEventAliveCancelled.
+- Added Parsers.RandomItem(T[]) and RandomItem(string).
+- Changed Parsers.RandomString to optionally pick each character set individually (lowercase, uppercase, digits), and to give equal weighting to all character sets.
+- Changed User so that generated mail verification tokens only contain digits.
+- Changed Request.Finish to output exception details regardless of IsAdmin while the server is in debug mode.
+- Added a try-catch to IFormFileExtensions.Download so uploaded files are deleted if the upload has been cancelled.
+- Changed AccountManager.ReportFailedAuth to ban entire IPv6 ranges by /64.
+- Increased MailManager.Out.Timeout from 5000 to 10000.
+- Improved SPF records checking (added support for key "a" with a specified domain).
+- Added more XSS safety and added bool IElement.Unsafe to allow HTML code in an element's attributes.
+- Implemented client certificates (ClientCertificatePort and EnableDelayedClientCertificates in Config; ClientCertificate and RequestClientCertificate in Request and LayerRequestData; interface ICertificateValidator and classes CertificateValidator, CertificateValidatorOwnCA and CertificateIdentifier).
+- Changed the server header to be configurable.
+- Various optimizations.
+
 2.1 (2024-05-26)
 - Changed Server.ParsePage(AppRequest, Page, CacheEntry) to (now public!) ParseIntoPage(AppRequest, Page, IEnumerable<string>) and moved the check for empty descriptions to it.
 - Added "neat" versions of the handler methods to Plugin. Those return the status code, allowing for a neater code. Additionally, the preset is called in the AppRequest handler. Returning 0 or 200 doesn't set any status code, -1 redirects to the login page for AppRequests. After writing has started, only 0/200 may be used for requests other than AppRequest.
