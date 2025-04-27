@@ -4,6 +4,12 @@
 
 Changelog for WebFramework
 
+3.0.1 (2025-04-27)
+- Added event Server.ProgramStopping.
+- Added bool Server.Config.AllowMoreMiddlewaresIfUnhandled.
+- Added function Server.Config.ConfigureWebApp.
+- Added class Translation to provide the option for localized texts.
+
 3.0 (2025-02-23)
 - Moved to the MIT license.
 - Updated to .NET 9.
